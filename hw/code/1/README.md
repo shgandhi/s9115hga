@@ -1,5 +1,5 @@
 ## s9115hga - CSC 791 Respository
-*sgandhi3@ncsu.edu*
+    sgandhi3@ncsu.edu
 
 ### Homework 1
 
