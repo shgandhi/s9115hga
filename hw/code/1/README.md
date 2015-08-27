@@ -13,6 +13,6 @@
 
 ![Easy_install](https://cloud.githubusercontent.com/assets/7557398/9486293/4a1fc1e6-4b93-11e5-9c72-449c3556b1e7.jpg?raw=true)
 
-**4. okok.py Tests Screenshot**
+**3 & 4. Syntax Highlighting and okok.py Tests Screenshot**
 
 ![okok.py](https://cloud.githubusercontent.com/assets/7557398/9530310/05300416-4ccd-11e5-80a8-0b28bc0ba417.jpg)
