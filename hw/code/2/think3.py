@@ -25,14 +25,17 @@ def print_lyrics():
 repeat_lyrics()
 """
 
+# Solution 3.3
 def right_justify(s):
     num_spaces = 70 - len(s)
     offset_string = ""
-    for i in range(num_spaces + 1):
+    for i in range(num_spaces):
         offset_string += " "
-    offset_string += s + "\n"
+    offset_string += s
     print offset_string
-    print offset_string.index(s[0])
-    print offset_string.index(s[0 + len(s) - 1])
-
+    
+    
+    #print offset_string.index(s)
+    #print offset_string[69]
+    
 right_justify("blahblahblaaaah")
