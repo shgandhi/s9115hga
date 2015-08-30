@@ -13,4 +13,4 @@ def right_justify(s):
     #print offset_string.index(s)
     #print offset_string[69]
     
-right_justify("blahblahblaaaah")
+right_justify("Allen")

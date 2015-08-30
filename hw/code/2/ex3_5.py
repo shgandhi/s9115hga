@@ -5,19 +5,20 @@
 def draw_hor_line(k):
     for cross in range(k):
         print "+",
-        for hypen in range(2*k):
+        for hypen in range(4):
             print "-",
     print "+"
     
 def draw_ver_line(k):
-    for vertical in range(2*k):
+    for vertical in range(4):
         for slash in range(k):
             print "|",
-            for space in range(2*k):
+            for space in range(4):
                 print " ",
         print "|"
         
 def draw_grid(size):
+    print "Grid with ", size,"rows and ", size, "columns"
     for i in range(size):
         draw_hor_line(size)
         draw_ver_line(size)
