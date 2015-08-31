@@ -2,6 +2,7 @@
     sgandhi3@ncsu.edu
     
 **Instructions**
+
     1. Navigate to code/hw/2
     2. run "./think3.sh"
     3. run "python think4.py"
