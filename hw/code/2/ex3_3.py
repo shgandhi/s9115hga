@@ -2,6 +2,14 @@
 # sgandhi@ncsu.edu
    
 # Solution 3.3
+for i in range(40):
+    print "=",
+print "\n"
+print "Solution 3.3"
+for i in range(40):
+    print "=",
+print "\n"
+    
 def right_justify(s):
     num_spaces = 70 - len(s)
     offset_string = ""

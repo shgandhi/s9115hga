@@ -2,6 +2,14 @@
 # sgandhi@ncsu.edu
    
 # Solution 3.5
+for i in range(40):
+    print "=",
+print "\n"
+print "Solution 3.5"
+for i in range(40):
+    print "=",
+print "\n"
+    
 def draw_hor_line(k):
     for cross in range(k):
         print "+",
@@ -29,3 +37,6 @@ draw_grid(2)
 
 #draws grid 4X4
 draw_grid(4)
+
+for i in range(40):
+    print "=",
