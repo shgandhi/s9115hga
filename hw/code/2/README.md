@@ -12,5 +12,5 @@
 **2. Output for Exercise 4.2**
 ![Think4_2](https://cloud.githubusercontent.com/assets/7557398/9571232/6f03d05a-4f68-11e5-8912-1292c5f2979f.png)
 
-**3. Output for Exercises 4.3**
+**3. Output for Exercise 4.3**
 ![Think4_3](https://cloud.githubusercontent.com/assets/7557398/9571234/712d8d6c-4f68-11e5-8a9e-e588103e82a8.png)
