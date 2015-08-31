@@ -11,7 +11,7 @@
 
 **1. Output for Exercises 3.1 - 3.5**
 
-![Think3Output](https://cloud.githubusercontent.com/assets/7557398/9571229/68dbd9ac-4f68-11e5-9b6a-b0d7ed4aca3b.PNG)
+![Think3Output](https://cloud.githubusercontent.com/assets/7557398/9571593/e373ca76-4f6d-11e5-9883-e3542d360a39.PNG)
 
 ![Think3Output_2](https://cloud.githubusercontent.com/assets/7557398/9571230/6b2f2c7c-4f68-11e5-993c-dc7b8e60a323.PNG)
 
