@@ -17,6 +17,16 @@
 
 * (iii2) **Hypotheses:** The authors realized that the two approaches with the best coverage i.e the search based and constraint solver based methodolgies complemented each other in terms of their advantages and disadvantages. Though, there had been previous attempts to combine the two, those methods were more focussed on hooking the two techniques together rather than intrinsically combining them. The authors decided to use a standard Genetic Algorithm for generating tests, with DSE being the mutation operator. This would negate the the problems of the search based method getting stuck in local optima, and when the constraint solver encountered unsolvable constraints, it would fall back on standard mutation. This was expected to handle the drawbacks of both the methods.
 
-* (iii3) **New Results:** 
+* (iii3) **New Results:** The authors developed a prototype based on Java PathFinder and evaluated it on a set of 20 case study objects containing a combination of linear/non-linear constraints, and used 50,000 test executions to compare the performance of *random search, genetic algorithm (GA), DSE, GA-DSE (proposed hybrid)*. The results were as follows -
+  *  GA-DSE achieved highest coverage on 18 out of 20 examples. In two linear constraints, it had same performance as GA and random search.
+  *  GA-DSE achieved higher coverage than DSE on 9 out of 20 examples. For the other 11, DSE and GA-DSE achieved equivalent performance.
+  *  DSE outperforms GA and random search on 15/20 examples, i.e. all except non linear constraints. Those 5 cases are included in the above point of 9/20 where GA-DSE is superior to all methods.
+  *  The approach does not cover any coverage criteria other than branch coverage, and it does not take test suite size into consideration.
+
 * (iii4) ****
+
+###(v) Suggested Improvements:
+* (v1) Metrics other than branch coverage could have been used to indicate more comprehensive performance comparison.
+* (v2) An equivalent mix of linear and non linear constraints could have been chosen for the benchmark case study examples. The paper used 15 linear and 5 non-linear/floating arithmetic cases.
+* (v3) The table used for comparison could have been replaced by a more insightful visualization.
 
