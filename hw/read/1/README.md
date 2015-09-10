@@ -15,7 +15,8 @@
 
 * (iii1) **Motivation:** The most successful approaches to automatically generate test data achieving high test coverage are usually based on meta-heuristic search or constraint solvers. While the search based testing is scalable, and can work with any code and test criterions, its' success depends on the availability of suitable fitness functions that can guide the search to an optimal solution. The presence of local optima/ plateaux in the search landscape described by the fitness function can lead to getting stuck in local optima/degrade to random search, respectively. Similarly, constraint based testing that uses DSE to generate constraints, while efficient, has limited scalability as there are certain domain of constraints it can not handle such as non-linear or floating point arithmetics. These open issues called for the need of developing a testing method that surpassed the given methods.
 
-* (iii2) **Hypothesis:** The 
-* (iii3) ****
+* (iii2) **Hypotheses:** The authors realized that the two approaches with the best coverage i.e the search based and constraint solver based methodolgies complemented each other in terms of their advantages and disadvantages. Though, there had been previous attempts to combine the two, those methods were more focussed on hooking the two techniques together rather than intrinsically combining them. The authors decided to use a standard Genetic Algorithm for generating tests, with DSE being the mutation operator. This would negate the the problems of the search based method getting stuck in local optima, and when the constraint solver encountered unsolvable constraints, it would fall back on standard mutation. This was expected to handle the drawbacks of both the methods.
+
+* (iii3) **New Results:** 
 * (iii4) ****
 
