@@ -23,7 +23,10 @@
   *  DSE outperforms GA and random search on 15/20 examples, i.e. all except non linear constraints. Those 5 cases are included in the above point of 9/20 where GA-DSE is superior to all methods.
   *  The approach does not cover any coverage criteria other than branch coverage, and it does not take test suite size into consideration.
 
-* (iii4) ****
+* (iii4) **Related Work:**
+  * *Combination of existing evolutionary tool with DSE tool:* K. Inkumsah and T. Xie, “Improving structural testing of object-oriented programs via integrating evolutionary testing and symbolic execution,” in Proceedings of the 2008 23rd IEEE/ACM International Conference on Automated Software Engineering (ASE’08).
+  * *DSE tool - PEX Extension:* K. Lakhotia, N. Tillmann, M. Harman, and J. de Halleux, “FloPSy - search-based floating point constraint solving for symbolic execution,” in 22nd IFIP International Conference on Testing Software and Systems, ser. Lecture Notes in Computer Science. Springer Berlin / Heidelberg, 2010.
+  * *DSE and random search combination:* R. Majumdar and K. Sen, “Hybrid concolic testing,” in Proceedings of the 29th International Conference on Software Engineering (ICSE’07).
 
 ###(v) Suggested Improvements:
 * (v1) Metrics other than branch coverage could have been used to indicate more comprehensive performance comparison.
