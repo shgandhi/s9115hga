@@ -42,7 +42,7 @@
  * Empirically investigate the effectiveness of the feedback loop formed between evolutionary testing and symbolic execution due to the two types of integration and compare it to the two existing integration types in Evacon.
   
 ###(v) Suggested Improvements:
-* (v1) Metrics other than branch coverage could have been used to indicate more comprehensive performance comparison.
-* (v2) An equivalent mix of linear and non linear constraints could have been chosen for the benchmark case study examples. The paper used 15 linear and 5 non-linear/floating arithmetic cases.
-* (v3) The table used for comparison could have been replaced by a more insightful visualization.
+* (v1) Their could have been more subject programs and third party tools in the experiments to further secure against external validity threat.
+* (v2) Mention if there was any consequence of not being able to impose time limit on the JUnit Factory on the overall results.
+* (v3) The tables used for comparison could have been replaced by a more insightful visualization.
 
