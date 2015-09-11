@@ -17,10 +17,10 @@
 
 * (iii2) **Checklist:** The authors followed the following series of steps in the paper.
  * Devise the framework for the integration of two existing testing techniques to address the problems in structural testing of object oriented programs. The authors describe their framework with the following 4 components -
-  * Evolutionary testing: Do population initialization, fitness calculation, chromosome selection, recombination and mutation.
-  * Symbolic Execution: Using jCUTE, do in loop - concrete execution and constraint collection, followed by constraint solving and input generation.
-  * Argument Transformation: Transform method arguments of method sequences into symbolic arguments.
-  * Chromosome Construction: Constructs non random chromosomes out of method sequences generated using symbolic execution for evolutionary testing.
+   * Evolutionary testing: Do population initialization, fitness calculation, chromosome selection, recombination and mutation.
+   * Symbolic Execution: Using jCUTE, do in loop - concrete execution and constraint collection, followed by constraint solving and input generation.
+   * Argument Transformation: Transform method arguments of method sequences into symbolic arguments.
+   * Chromosome Construction: Constructs non random chromosomes out of method sequences generated using symbolic execution for evolutionary testing.
  * Show the empirical comparison of the integration with the state of the art respresentative testing tools for test generation techniques such as search-based test generation using genetic algorithms, symbolic execution and random testing.
  * Give a detailed comparison of strengths and weaknesses of different testing tools in terms of achieving high structural coverage.
 
