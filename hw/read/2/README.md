@@ -24,15 +24,25 @@
  * Show the empirical comparison of the integration with the state of the art respresentative testing tools for test generation techniques such as search-based test generation using genetic algorithms, symbolic execution and random testing.
  * Give a detailed comparison of strengths and weaknesses of different testing tools in terms of achieving high structural coverage.
 
-* (iii3) **Patterns:** The authors carried out comprehensive analysis of the test generation tools that they used for comparison with their Evacon framework. This directs the prospective user to both the (dis)advantages of these tools. The following can be reused - 
-  |Test generation tool | Used for | Advantages | Disadvantages |
-  |---------------------|----------|------------|---------------|
-  |Randoop              | random testing|
-* (iii4) **Related Work:**
-  * *Combination of existing evolutionary tool with DSE tool:* K. Inkumsah and T. Xie, “Improving structural testing of object-oriented programs via integrating evolutionary testing and symbolic execution,” in Proceedings of the 2008 23rd IEEE/ACM International Conference on Automated Software Engineering (ASE’08).
-  * *DSE tool - PEX Extension:* K. Lakhotia, N. Tillmann, M. Harman, and J. de Halleux, “FloPSy - search-based floating point constraint solving for symbolic execution,” in 22nd IFIP International Conference on Testing Software and Systems, ser. Lecture Notes in Computer Science. Springer Berlin / Heidelberg, 2010.
-  * *DSE and random search combination:* R. Majumdar and K. Sen, “Hybrid concolic testing,” in Proceedings of the 29th International Conference on Software Engineering (ICSE’07).
+* (iii3) **Patterns:** 
+ * The authors clearly delineated the research questions investigated in the paper, which can be used as benchmark questions for analyzing any test generation tool or framework -
+    * *Utility:* How does the proposed tool fare against representative test generation tools.
+    * *Demonstrating the need of the solution:* The proposed framework specifically targets branches that required longer method sequences, the authors demonstrated that certain type of branches needed longer method sequences for optimal branch coverage.
+    * *Identifying other solutions based on uniqueness of the problem solved:* The authors identified other tools for comparison based on those tools' unique coverage of some branches which couldn't be covered by other tools. This was the basis of shortlisting tools required for achieving optimal branch coverage.
+ * The authors carried out comprehensive analysis of the test generation tools that they used for comparison with their propsed Evacon framework. This directs the prospective user to both the (dis)advantages of these tools. 
+ * The average branch coverage of the proposed frameworks were found to be lower than the aggregated average of all the other 4 tools combined. This suggested that for some classes, using multiple tools in combination may be more beneficial than using a single tool to achieve optimal coverage.
+ * Use of *Branch ranking metric*: Instead of widely used percentages of branch coverage, branch ranking metric is more useful when selecting multiple tools to use in combination among the tools under comparison. It also,
+    * Helps in selecting appropriate tools or their combination for *residual* branch coverage,
+    * Compares relative strength of each tool in a set of tools in terms of branch coverage.
+    * It does not let including a poor tool in tool comparison affect the comparison of tools with relatively better effectiveness.
+  
+* (iii4) **New Results:**
+   The following can be reused - 
 
+  | Test generation tool  |   Used for     | Advantages   | Disadvantages  |
+  | --------------------- | -------------- | ------------ | -------------- |
+  | Randoop               | random testing |  Avoids generating exception-throwing tests |                |
+  
 ###(v) Suggested Improvements:
 * (v1) Metrics other than branch coverage could have been used to indicate more comprehensive performance comparison.
 * (v2) An equivalent mix of linear and non linear constraints could have been chosen for the benchmark case study examples. The paper used 15 linear and 5 non-linear/floating arithmetic cases.
