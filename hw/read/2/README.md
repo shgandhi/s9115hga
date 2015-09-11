@@ -3,13 +3,13 @@
 ###(i) Reference: Kobi Inkumsah and Tao Xie, North Carolina State University, ASE-2008. [Improving Structural Testing of Object-Oriented Programs via Integrating Evolutionary Testing and Symbolic Execution](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4639333). 
 
 ###(ii) Keywords:
-* (ii1) **Search Based Testing:** It defines the testing problem as a search problem and applies efficient algorithms to find inputs that can serve as tests.
+* (ii1) **Evolutionary Testing:** It tries to improve the effectiveness and efficiency of testing process by transforming testing objectives into search problem, and applying evolutionary computation in order to solve them.
 
 * (ii2) **Symbolic Execution:** The key idea here is to generalize testing by using *unknown* symbolic variables in evaluation. A symbolic executor collects all path conditions (eg. if clauses) and operations on symbolic variables along the path selected by a tester. Then these conditions are fed to a constraint solver to derive all inputs that make the program follow this path, as done in *classic constraint based testing*
 
 * (ii3) **Method Sequence Skeleton:** It is a method sequence whose methods' primitive arguments are not specified.
 
-* (ii4) **Branch Coverage:** It is a testing metric which considers a branch in a code (eg. if statements, loops) to be covered only if it is executed both ways, i.e. the branch must have been true at least once, and false atleast once during testing.
+* (ii4) **Structural Coverage:** It is a testing metric based on the structure of the program, intended to find defects rather than exploring the behaviour of the system. It can be focussed on either exploring the control aspect of the code, or explore the definition/use relationship between data elements.
 
 ###(iii) Artifacts:
 
@@ -36,12 +36,10 @@
     * Compares relative strength of each tool in a set of tools in terms of branch coverage.
     * It does not let including a poor tool in tool comparison affect the comparison of tools with relatively better effectiveness.
   
-* (iii4) **New Results:**
-   The following can be reused - 
-
-  | Test generation tool  |   Used for     | Advantages   | Disadvantages  |
-  | --------------------- | -------------- | ------------ | -------------- |
-  | Randoop               | random testing |  Avoids generating exception-throwing tests |                |
+* (iii4) **Future Work:**
+ * Compare the effectiveness of test generation tools in achieving other types of coverage criteria such as data flow coverage and mutation testing.
+ * Using branch ranking metric for doing the above.
+ * Empirically investigate the effectiveness of the feedback loop formed between evolutionary testing and symbolic execution due to the two types of integration and compare it to the two existing integration types in Evacon.
   
 ###(v) Suggested Improvements:
 * (v1) Metrics other than branch coverage could have been used to indicate more comprehensive performance comparison.
