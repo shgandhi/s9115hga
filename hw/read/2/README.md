@@ -21,17 +21,17 @@
     * *Symbolic Execution:* Using jCUTE, do in loop - concrete execution and constraint collection, followed by constraint solving and input generation.
     * *Argument Transformation:* Transform method arguments of method sequences into symbolic arguments.
     * *Chromosome Construction:* Constructs non random chromosomes out of method sequences generated using symbolic execution for evolutionary testing.
- * Show the empirical comparison of the integration with the state of the art respresentative testing tools for test generation techniques such as search-based test generation using genetic algorithms, symbolic execution and random testing.
+ * Show the empirical comparison of the integration with the respresentative testing tools for test generation techniques such as search-based test generation using genetic algorithms, symbolic execution and random testing.
  * Give a detailed comparison of strengths and weaknesses of different testing tools in terms of achieving high structural coverage.
 
 * (iii3) **Patterns:** 
  * The authors clearly delineated the research questions investigated in the paper, which can be used as benchmark questions for analyzing any test generation tool or framework -
-    * *Utility:* How does the proposed tool fare against representative test generation tools.
-    * *Demonstrating the need of the solution:* The proposed framework specifically targets branches that required longer method sequences, the authors demonstrated that certain type of branches needed longer method sequences for optimal branch coverage.
-    * *Identifying other solutions based on uniqueness of the problem solved:* The authors identified other tools for comparison based on those tools' unique coverage of some branches which couldn't be covered by other tools. This was the basis of shortlisting tools required for achieving optimal branch coverage.
+    * __Utility:__ How does the proposed tool fare against representative test generation tools.
+    * __Demonstrating the need of the solution:__ The proposed framework specifically targets branches that required longer method sequences, the authors demonstrated that certain type of branches needed longer method sequences for optimal branch coverage.
+    * __Identifying other solutions based on uniqueness of the problem solved:__ The authors identified other tools for comparison based on those tools' unique coverage of some branches which couldn't be covered by other tools. This was the basis of shortlisting tools required for achieving optimal branch coverage.
  * The authors carried out comprehensive analysis of the test generation tools that they used for comparison with their propsed Evacon framework. This directs the prospective user to both the (dis)advantages of these tools. 
  * The average branch coverage of the proposed frameworks were found to be lower than the aggregated average of all the other 4 tools combined. This suggested that for some classes, using multiple tools in combination may be more beneficial than using a single tool to achieve optimal coverage.
- * Use of *Branch ranking metric*: Instead of widely used percentages of branch coverage, branch ranking metric is more useful when selecting multiple tools to use in combination among the tools under comparison. It also,
+ * Use of __Branch ranking metric__: Instead of widely used percentages of branch coverage, branch ranking metric is more useful when selecting multiple tools to use in combination among the tools under comparison. It also,
     * Helps in selecting appropriate tools or their combination for *residual* branch coverage,
     * Compares relative strength of each tool in a set of tools in terms of branch coverage.
     * It does not let including a poor tool in tool comparison affect the comparison of tools with relatively better effectiveness.
@@ -42,7 +42,7 @@
  * Empirically investigate the effectiveness of the feedback loop formed between evolutionary testing and symbolic execution due to the two types of integration and compare it to the two existing integration types in Evacon.
   
 ###(v) Suggested Improvements:
-* (v1) Their could have been more subject programs and third party tools in the experiments to further secure against external validity threat.
+* (v1) There could have been more subject programs and third party tools in the experiments to further secure against external validity threat.
 * (v2) Mention if there was any consequence of not being able to impose time limit on the JUnit Factory on the overall results.
 * (v3) The tables used for comparison could have been replaced by a more insightful visualization.
 
