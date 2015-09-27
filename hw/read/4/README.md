@@ -24,13 +24,13 @@ program. However, it's very difficult to explore all possible program execution 
  * Botella, B., Gotlieb, A., Michel, C.: _"Symbolic execution of floating-point computations"_. Softw. Test, Verif. Reliab 16(2), 97–121 (2006)
 
 
-* (iii3) **Checklists:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
+* (iii3) **Informative Visualizations:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
  * _Description & Implementation_ - The authors describe and implement a technique for statically partitioning a symbolic execution tree and distributing the partitions across parallel instances.
  * _Framework Development_ - The authors develop a flexible, extensible framework for parallelizing Java Pathfinder, using a simple client-server model, with coordination and communication across parallel instances of JPF handled by an extension of JPF listeners.
  * _Evaluation_ - The authors evaluate their work in terms of the speedup when exploring a finite symbolic execution
 tree (the time to completely explore a finite symbolic execution tree) and the performance of automatic test generation ( time to generate tests meeting the Modified Condition/Decision Coverage (MC/DC) structural coverage criterion).
 
-* (iii4) **Future Work:**
+* (iii4) **New Results:**
    * Due to similarity between searching for states satisfying coverage obligations and searching for states violating assertions/properties, the authors propose evaluating the partitioning techniques in other contexts such as fault detection.
    * The authors suggest that combining static partitioning techniques (via control graphs) with dynamic partitioning could be very effective for parallelizing symbolic execution, and plan to work in that direction.
   
