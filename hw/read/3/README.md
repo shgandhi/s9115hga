@@ -16,10 +16,10 @@
 * (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
 
 * (iii2) **Related Work:** 
- * A. Arcuri and X. Yao, “Search based software testing of object-oriented containers,” Information Sciences, vol. 178, no. 15, pp. 3075–3095, 2008.
- * L. Baresi, P. L. Lanzi, and M. Miraz, “Testful: an evolutionary test approach for Java,” in ICST’10: Proceedings of the 3rd International Conference on Software Testing, Verification and Validation. IEEE Computer Society, 2010, pp. 185–194.
- * B. Baudry, F. Fleurey, J.-M. J´ez´equel, and Y. Le Traon, “Automatic test cases optimization: a bacteriologic algorithm,” IEEE Software, vol. 22, no. 2, pp. 76–82, Mar. 2005.
- * C. Pacheco and M. D. Ernst, “Randoop: feedback-directed random testing for Java,” in OOPSLA’07: Companion to the 22nd ACM SIGPLAN Conference on Object-oriented Programming Systems and Application. ACM, 2007, pp. 815–816
+ * A. Arcuri and X. Yao, _“Search based software testing of object-oriented containers,”_ Information Sciences, vol. 178, no. 15, pp. 3075–3095, 2008.
+ * L. Baresi, P. L. Lanzi, and M. Miraz, _“Testful: an evolutionary test approach for Java,”_ in ICST’10: Proceedings of the 3rd International Conference on Software Testing, Verification and Validation. IEEE Computer Society, 2010, pp. 185–194.
+ * B. Baudry, F. Fleurey, J.-M. J´ez´equel, and Y. Le Traon, _“Automatic test cases optimization: a bacteriologic algorithm,”_ IEEE Software, vol. 22, no. 2, pp. 76–82, Mar. 2005.
+ * C. Pacheco and M. D. Ernst, _“Randoop: feedback-directed random testing for Java,”_ in OOPSLA’07: Companion to the 22nd ACM SIGPLAN Conference on Object-oriented Programming Systems and Application. ACM, 2007, pp. 815–816
 
 * (iii3) **Statistical Tests:** 
  * The proposed approach "EVOSUITE" and search based testing are based on randomized algorithms, to properly analyze the algorithms the authors followed the guidelines in _A. Arcuri and L. Briand, “A practical guide for using statistical tests to assess randomized algorithms in software engineering,” IEEE ICSE 2011_. The authors ran EVOSUITE against the single branch strategy for each of the 727 public classes, to compare their achieved coverage. Each experiment comparison was repeated 100 times with different seeds for the random number generator.
@@ -33,7 +33,10 @@
    
 * (iii4) **Informative Visualizations:**
 
+<img src="https://cloud.githubusercontent.com/assets/7557398/10121639/447eaa0a-64c4-11e5-97f7-81c753fedda1.jpg" width = "420" height="240"><img src="https://cloud.githubusercontent.com/assets/7557398/10121640/46969654-64c4-11e5-897f-0298182956b3.jpg" width = "420" height="280">
+
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
+
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121567/6436d38a-64c0-11e5-8cf0-cc505fb7fc53.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121568/6436fe82-64c0-11e5-8cb0-f561c23a24c8.png" width = "420" height="320">
   
 ###(v) Suggested Improvements:
