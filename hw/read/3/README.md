@@ -1,19 +1,19 @@
 ##Summary
 
-###(i) Reference: Kobi Inkumsah and Tao Xie, North Carolina State University, ASE-2008. [Improving Structural Testing of Object-Oriented Programs via Integrating Evolutionary Testing and Symbolic Execution](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4639333). 
+###(i) Reference: Gordon Fraser, Saarland University and Andrea Arcuri, Simula Research Laboratory, Quality Software (QSIC), 2011 11th International Conference on. IEEE, 2011. [Evolutionary Generation of Whole Test Suites](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6004309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6004309). 
 
 ###(ii) Keywords:
-* (ii1) **Evolutionary Testing:** It tries to improve the effectiveness and efficiency of testing process by transforming testing objectives into search problem, and applying evolutionary computation in order to solve them.
+* (ii1) **Search based testing:** It tries to improve the effectiveness and efficiency of testing process by transforming testing objectives into search problem, and applying evolutionary computation in order to solve them.
 
-* (ii2) **Symbolic Execution:** The key idea here is to generalize testing by using *unknown* symbolic variables in evaluation. A symbolic executor collects all path conditions (eg. if clauses) and operations on symbolic variables along the path selected by a tester. Then these conditions are fed to a constraint solver to derive all inputs that make the program follow this path, as done in *classic constraint based testing*
+* (ii2) **Length coverage:** The key idea here is to generalize testing by using *unknown* symbolic variables in evaluation. A symbolic executor collects all path conditions (eg. if clauses) and operations on symbolic variables along the path selected by a tester. Then these conditions are fed to a constraint solver to derive all inputs that make the program follow this path, as done in *classic constraint based testing*
 
-* (ii3) **Method Sequence Skeleton:** It is a method sequence whose methods' primitive arguments are not specified.
+* (ii3) **Branch coverage:** It is a method sequence whose methods' primitive arguments are not specified.
 
-* (ii4) **Structural Coverage:** It is a testing metric based on the structure of the program, intended to find defects rather than exploring the behaviour of the system. It can be focussed on either exploring the control aspect of the code, or explore the definition/use relationship between data elements.
+* (ii4) **Genetic Algorithm:** It is a testing metric based on the structure of the program, intended to find defects rather than exploring the behaviour of the system. It can be focussed on either exploring the control aspect of the code, or explore the definition/use relationship between data elements.
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:** To increase the confidence in a unit test of a code under test, it is imperative that the unit has good structural coverage (eg. branch coverage). Despite of many test generation tools having been built over time to ensure good structural coverage, there are still two main challenges when it comes to achieving good branch coverage. First is the requirement of an in-depth knowledge of program structure and semantics to generate tests to cover complex logics in some branches. Second is generating special method sequences out of the huge search space of method sequences, to cover branches that lead receiver objects/ non primitive arguments (in Object Oriented Programming) to reach a desirable state. Though these two challenges have been met by symbolic execution and evolutionary testing, respectively, no work had been done to combine the two approaches and meet both the challenges simulataneously, this led the authors to propose a framework *Evacon*. 
+* (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
 
 * (iii2) **Checklist:** The authors followed the following series of steps in the paper.
  * Devise the framework for the integration of two existing testing techniques to address the problems in structural testing of object oriented programs. The authors describe their framework with the following 4 components -
