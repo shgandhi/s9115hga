@@ -1,6 +1,6 @@
 ##Summary
 
-###(i) Reference: Gordon Fraser, Saarland University and Andrea Arcuri, Simula Research Laboratory, IEEE, 2011. [Evolutionary Generation of Whole Test Suites](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6004309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6004309). 
+###(i) Reference: Matt Staats, University of Minnesota and Corina Pasareanu, Carnegie Mellon University/NASA Ames, ACM, 2010. [Parallel Symbolic Execution for Structural Test Generation](http://dl.acm.org/citation.cfm?id=1831708.1831732). 
 
 ###(ii) Keywords:
 * (ii1) **Length of Test Suite:** A test case is a sequence of statements _t = <s1,s2, . . . ,sl>_ of length l. The length of a test suite is defined as the sum of the lengths of its test cases.
@@ -16,10 +16,24 @@
 * (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
 
 * (iii2) **Related Work:** 
- * A. Arcuri and X. Yao, _“Search based software testing of object-oriented containers,”_ Information Sciences, vol. 178, no. 15, pp. 3075–3095, 2008.
- * L. Baresi, P. L. Lanzi, and M. Miraz, _“Testful: an evolutionary test approach for Java,”_ in ICST’10: Proceedings of the 3rd International Conference on Software Testing, Verification and Validation. IEEE Computer Society, 2010, pp. 185–194.
- * B. Baudry, F. Fleurey, J.-M. J´ez´equel, and Y. Le Traon, _“Automatic test cases optimization: a bacteriologic algorithm,”_ IEEE Software, vol. 22, no. 2, pp. 76–82, Mar. 2005.
- * C. Pacheco and M. D. Ernst, _“Randoop: feedback-directed random testing for Java,”_ in OOPSLA’07: Companion to the 22nd ACM SIGPLAN Conference on Object-oriented Programming Systems and Application. ACM, 2007, pp. 815–816
+ * Parallelizing software model checking: 
+    * M. Dwyer, S. Elbaum, S. Person, and R. Purandare. _"Parallel randomized state-space search"_. In Proc of 29th Int’l.
+Conference on Software Engineering, pages 3–12, 2007.
+     * G. Holzmann and D. Bosnacki. _"The design of a multicore extension of the spin model checker"_. IEEE Transactions on
+Software Engineering, 33(10):659–674, 2007.
+     * G. Holzmann, R. Joshi, and A. Croce. _"Tackling large verification problems with the swarm tool"_. Proc. 15th Int’l.
+SPIN Workshop, 5156:134–143, 2008.
+     * U. Stern and D. Dill. Parallelizing the Mur\phi verifier. Formal Methods in System Design, 18(2):117–129, 2001.
+ * Parallelizing symbolic execution:
+    * L. Ciortea, C. Zamfir, S. Bucur, V. Chipounov, and G. Candea. _"Cloud9: A Software Testing Service"_.
+    * A. King. _"Distributed parallel symbolic execution"_. Master’s thesis, Kansas State University, 2009.
+ * Counterexample based test generation:
+    * P. E. Ammann, P. E. Black, and W. Majurski. _"Using model checking to generate tests from specifications"_. In Proc. of
+2nd IEEE Int’l. Conference on Formal Engineering Methods, pages 46–54. IEEE Computer Society, Nov. 1998. 
+     * S. Rayadurgam and M. P. Heimdahl. _"Coverage based test-case generation using model checkers"_. In Proc. of the 8th
+IEEE Int’l. Conference and Workshop on the Engineering of Computer Based Systems, pages 83–91. IEEE Computer Society, April 2001.
+     * S. Khurshid, C. Pasareanu, and W. Visser. _"Generalized symbolic execution for model checking and testing"_. Proc. of
+the 9th TACAS, pages 553–568, 2003.
 
 * (iii3) **Statistical Tests:** 
  * The proposed approach "EVOSUITE" and search based testing are based on randomized algorithms, to properly analyze the algorithms the authors followed the guidelines in _A. Arcuri and L. Briand, “A practical guide for using statistical tests to assess randomized algorithms in software engineering,” IEEE ICSE 2011_. The authors ran EVOSUITE against the single branch strategy for each of the 727 public classes, to compare their achieved coverage. Each experiment comparison was repeated 100 times with different seeds for the random number generator.
