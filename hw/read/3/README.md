@@ -15,14 +15,11 @@
 
 * (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
 
-* (iii2) **Checklist:** The authors followed the following series of steps in the paper.
- * Devise the framework for the integration of two existing testing techniques to address the problems in structural testing of object oriented programs. The authors describe their framework with the following 4 components -
-    * *Evolutionary testing:* Do population initialization, fitness calculation, chromosome selection, recombination and mutation.
-    * *Symbolic Execution:* Using jCUTE, do in loop - concrete execution and constraint collection, followed by constraint solving and input generation.
-    * *Argument Transformation:* Transform method arguments of method sequences into symbolic arguments.
-    * *Chromosome Construction:* Constructs non random chromosomes out of method sequences generated using symbolic execution for evolutionary testing.
- * Show the empirical comparison of the integration with the respresentative testing tools for test generation techniques such as search-based test generation using genetic algorithms, symbolic execution and random testing.
- * Give a detailed comparison of strengths and weaknesses of different testing tools in terms of achieving high structural coverage.
+* (iii2) **Related Work:** 
+ * A. Arcuri and X. Yao, “Search based software testing of object-oriented containers,” Information Sciences, vol. 178, no. 15, pp. 3075–3095, 2008.
+ * L. Baresi, P. L. Lanzi, and M. Miraz, “Testful: an evolutionary test approach for Java,” in ICST’10: Proceedings of the 3rd International Conference on Software Testing, Verification and Validation. IEEE Computer Society, 2010, pp. 185–194.
+ * B. Baudry, F. Fleurey, J.-M. J´ez´equel, and Y. Le Traon, “Automatic test cases optimization: a bacteriologic algorithm,” IEEE Software, vol. 22, no. 2, pp. 76–82, Mar. 2005.
+ * C. Pacheco and M. D. Ernst, “Randoop: feedback-directed random testing for Java,” in OOPSLA’07: Companion to the 22nd ACM SIGPLAN Conference on Object-oriented Programming Systems and Application. ACM, 2007, pp. 815–816
 
 * (iii3) **Patterns:** 
  * The authors clearly delineated the research questions investigated in the paper, which can be used as benchmark questions for analyzing any test generation tool or framework -
