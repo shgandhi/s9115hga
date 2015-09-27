@@ -3,13 +3,13 @@
 ###(i) Reference: Gordon Fraser, Saarland University and Andrea Arcuri, Simula Research Laboratory, IEEE, 2011. [Evolutionary Generation of Whole Test Suites](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6004309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6004309). 
 
 ###(ii) Keywords:
-* (ii1) **Search based testing:** It tries to improve the effectiveness and efficiency of testing process by transforming testing objectives into search problem, and applying evolutionary computation in order to solve them.
+* (ii1) **Length of Test Suite:** A test case is a sequence of statements _t = <s1,s2, . . . ,sl>_ of length l. The length of a test suite is defined as the sum of the lengths of its test cases.
 
-* (ii2) **Length coverage:** The key idea here is to generalize testing by using *unknown* symbolic variables in evaluation. A symbolic executor collects all path conditions (eg. if clauses) and operations on symbolic variables along the path selected by a tester. Then these conditions are fed to a constraint solver to derive all inputs that make the program follow this path, as done in *classic constraint based testing*
+* (ii2) **Collateral coverage:** When a test case targeting a particular coverage goal also satisfies further coverage goals by accident, it is called collateral or serendipitious coverage.
 
-* (ii3) **Branch coverage:** It is a method sequence whose methods' primitive arguments are not specified.
+* (ii3) **Infeasible coverage:** Infeasibility in coverage goals means that there exists no test that would exercise those goals; this is an instance of the undecidable infeasible path problem
 
-* (ii4) **Genetic Algorithm:** It is a testing metric based on the structure of the program, intended to find defects rather than exploring the behaviour of the system. It can be focussed on either exploring the control aspect of the code, or explore the definition/use relationship between data elements.
+* (ii4) **Genetic Algorithm:** Genetic Algorithms (GAs) qualify as meta-heuristic search technique that attempt to imitate the mechanisms of natural adaptation in computer systems. A population of chromosomes is evolved using genetics-inspired operations, where each chromosome represents a possible problem solution.
 
 ###(iii) Artifacts:
 
