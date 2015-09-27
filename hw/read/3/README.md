@@ -13,7 +13,8 @@
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
+* (iii1) **Motivation:**  Symbolic execution achieves high structural coverage for automatic test generation and the paths followed during symbolic execution form a symbolic execution tree, which represent all the possible executions through the
+program. However, it's very difficult to explore all possible program execution as the symbolic execution tree can be infinitely large in size. This limits the application of symbolic execution as it is vulnerable to scalability issues. But motivated by the high availability of multi-core computers, and the parallelizable nature of symbolic execution, the authors proposed to mitigate this problem by parallelizing symbolic execution such that the essence of parallelization is maintained. This was proposed to be done by eliminating synchronization overhead by designing approaches that required minimum inter process communication.
 
 * (iii2) **Related Work:** 
  * Parallelizing software model checking: 
