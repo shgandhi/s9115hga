@@ -3,13 +3,13 @@
 ###(i) Reference: Matt Staats, University of Minnesota and Corina Pasareanu, Carnegie Mellon University/NASA Ames, ACM, 2010. [Parallel Symbolic Execution for Structural Test Generation](http://dl.acm.org/citation.cfm?id=1831708.1831732). 
 
 ###(ii) Keywords:
-* (ii1) **Length of Test Suite:** A test case is a sequence of statements _t = <s1,s2, . . . ,sl>_ of length l. The length of a test suite is defined as the sum of the lengths of its test cases.
+* (ii1) **Java PathFinder:** Java Pathfinder (JPF) is an open-source tool-set for verifying Java bytecodes. It includes an explicit-state model-checker (core-JPF) and several extensions, e.g. Symbolic PathFinder and ComplexCoverage.
 
-* (ii2) **Collateral coverage:** When a test case targeting a particular coverage goal also satisfies further coverage goals by accident, it is called collateral or serendipitious coverage.
+* (ii2) **Simple Static Partitioning:** The method of parallelization that statically partitions and distributes execution by (1) generating a queue of constraints and (2) distributing these constraints (as part of a standard JPF configuration) to workers, which use the constraints to direct symbolic execution.
 
-* (ii3) **Infeasible coverage:** Infeasibility in coverage goals means that there exists no test that would exercise those goals; this is an instance of the undecidable infeasible path problem
+* (ii3) **Random depth first search:** Random depth first search (RDFS) performs depth first search while randomly selecting the order branches in the tree are explored. It has very low overhead and is amenable to parallel execution via different random seeds.
 
-* (ii4) **Genetic Algorithm:** Genetic Algorithms (GAs) qualify as meta-heuristic search technique that attempt to imitate the mechanisms of natural adaptation in computer systems. A population of chromosomes is evolved using genetics-inspired operations, where each chromosome represents a possible problem solution.
+* (ii4) **Model Checking:** The model-checking algorithm is a decision procedure which in addition to the yes/no answer returns a trace of a faulty behaviour in case the checked property is not satisfied by the model.
 
 ###(iii) Artifacts:
 
@@ -42,15 +42,13 @@ the 9th TACAS, pages 553–568, 2003.
 tree (the time to completely explore a finite symbolic execution tree) and the performance of automatic test generation ( time to generate tests meeting the Modified Condition/Decision Coverage (MC/DC) structural coverage criterion).
 
 * (iii4) **Future Work:**
-
-<img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
-
-<img src="https://cloud.githubusercontent.com/assets/7557398/10121567/6436d38a-64c0-11e5-8cf0-cc505fb7fc53.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121568/6436fe82-64c0-11e5-8cb0-f561c23a24c8.png" width = "420" height="320">
+   * Due to similarity between searching for states satisfying coverage obligations and searching for states violating assertions/properties, the authors propose evaluating the partitioning techniques in other contexts such as fault detection.
+   * The authors suggest that combining static partitioning techniques (via control graphs) with dynamic partitioning could be very effective for parallelizing symbolic execution, and plan to work in that direction.
   
 ###(v) **Suggested Improvements:**
-* (v1) Mention why specifically Mann Whitney U Test and Vargha Delaney effect size were used in statistical evaluation.
-* (v2) Use of performance measures that take into account how difficult it will be to check the correctness of the outputs.
-* (v3) Analysis of the results specific to each case study to more clearly delineate why the proposed approach is better.
+* (v1) Include an emperical comparison of using shallow execution bounds and longer bounds.
+* (v2) Mention the reason for running parallel workers with parallel RDFS using specifically 64 random seeds and 1,000 samples.
+* (v3) Statistical analysis of the results could have been done to give more insightful interpreations.
 
 ###(vi) **Connection to other papers:**
-The work done in this paper forms the basis for _"Combining Search-based and Constraint-based Testing"_, which uses whole suite test generation for GA implementation in a hybrid approach that integrates search based testing with constraint based testing.
+The case studies WBS (theWheel Brake System, a synchronous reactive component from the automotive domain), FGS and ASW (the Altitude Switch, a synchronous reactive component from the avionics domain) used for analysis in _"Combining Search-based and Constraint-based Testing"_, were translated to Java for analysis in this paper.
