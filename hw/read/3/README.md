@@ -1,6 +1,6 @@
 ##Summary
 
-###(i) Reference: Matt Staats, University of Minnesota and Corina Pasareanu, Carnegie Mellon University/NASA Ames, ACM, 2010. [Parallel Symbolic Execution for Structural Test Generation](http://dl.acm.org/citation.cfm?id=1831708.1831732). 
+###(i) Reference: Matt Staats, University of Minnesota and Corina Pasareanu, Carnegie Mellon University/NASA Ames, ACM, 2010. [Parallel Symbolic Execution for Structural Test Generation](http://dl.acm.org/citation.cfm?id=1831708.1831732). 
 
 ###(ii) Keywords:
 * (ii1) **Length of Test Suite:** A test case is a sequence of statements _t = <s1,s2, . . . ,sl>_ of length l. The length of a test suite is defined as the sum of the lengths of its test cases.
@@ -35,17 +35,13 @@ IEEE Int’l. Conference and Workshop on the Engineering of Computer Based Syste
      * S. Khurshid, C. Pasareanu, and W. Visser. _"Generalized symbolic execution for model checking and testing"_. Proc. of
 the 9th TACAS, pages 553–568, 2003.
 
-* (iii3) **Statistical Tests:** 
- * The proposed approach "EVOSUITE" and search based testing are based on randomized algorithms, to properly analyze the algorithms the authors followed the guidelines in _A. Arcuri and L. Briand, “A practical guide for using statistical tests to assess randomized algorithms in software engineering,” IEEE ICSE 2011_. The authors ran EVOSUITE against the single branch strategy for each of the 727 public classes, to compare their achieved coverage. Each experiment comparison was repeated 100 times with different seeds for the random number generator.
- *  *Mann Whitney U Test*- It is a non-parametric statistical hypothesis test, i.e. it allows the comparison of two samples with unknown distributions. It was used to assess whether the effectiveness of EVOSUITE and single branch based approach were statistically different. 
- *  *Vargha-Delaney Aˆ12 statistic*- To measure the magnitude of the difference in a standardized way i.e. using the _effect size_; the Aˆ12 statistic was used. In the context of this experiment, the Aˆ12 is an estimation of the probability that, better coverage is obtained upon running EVOSUITE, than running the single branch strategy. When two randomized algorithms were equivalent, then Aˆ12 = 0.5. A high value Aˆ12 = 1 meant that, in all of the 100 runs of EVOSUITE, higher coverage values were obtained than the ones obtained in all of the 100 runs of the single branch strategy.
- *  Boxplots were used to visualize the comparison between the two approaches for all the six case studies by using as a measure -
-   * Average branch coverage
-    * Aˆ12 for coverage
-    * Average length values when Aˆ12 = 0.5
-    * Aˆ12 for length
-   
-* (iii4) **Informative Visualizations:**
+* (iii3) **Checklists:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
+ * _Description & Implementation_ - The authors describe and implement a technique for statically partitioning a symbolic execution tree and distributing the partitions across parallel instances.
+ * _Framework Development_ - The authors develop a flexible, extensible framework for parallelizing Java Pathfinder, using a simple client-server model, with coordination and communication across parallel instances of JPF handled by an extension of JPF listeners.
+ * _Evaluation_ - The authors evaluate their work in terms of the speedup when exploring a finite symbolic execution
+tree (the time to completely explore a finite symbolic execution tree) and the performance of automatic test generation ( time to generate tests meeting the Modified Condition/Decision Coverage (MC/DC) structural coverage criterion).
+
+* (iii4) **Future Work:**
 
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
 
