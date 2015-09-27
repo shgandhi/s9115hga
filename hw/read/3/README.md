@@ -47,9 +47,9 @@ tree (the time to completely explore a finite symbolic execution tree) and the p
    * The authors suggest that combining static partitioning techniques (via control graphs) with dynamic partitioning could be very effective for parallelizing symbolic execution, and plan to work in that direction.
   
 ###(v) **Suggested Improvements:**
-* (v1) Include an emperical comparison of using shallow execution bounds and longer bounds.
-* (v2) Mention the reason for running parallel workers with parallel RDFS using specifically 64 random seeds and 1,000 samples.
-* (v3) Statistical analysis of the results could have been done to give more insightful interpreations.
+* (v1) An empirical comparison of using shallow execution bounds and longer bounds could have been included to show more representative results.
+* (v2) The reason for running parallel workers with parallel RDFS using specifically 64 random seeds and 1,000 samples could have been mentioned.
+* (v3) Statistical analysis of the results could have been done to give more insightful interpretations.
 
 ###(vi) **Connection to other papers:**
 The case studies WBS (theWheel Brake System, a synchronous reactive component from the automotive domain), FGS and ASW (the Altitude Switch, a synchronous reactive component from the avionics domain) used for analysis in _"Combining Search-based and Constraint-based Testing"_, were translated to Java for analysis in this paper.
