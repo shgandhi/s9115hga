@@ -33,7 +33,7 @@
    
 * (iii4) **Informative Visualizations:**
 
-<img src="https://cloud.githubusercontent.com/assets/7557398/10121639/447eaa0a-64c4-11e5-97f7-81c753fedda1.jpg" width = "420" height="240"><img src="https://cloud.githubusercontent.com/assets/7557398/10121640/46969654-64c4-11e5-897f-0298182956b3.jpg" width = "420" height="280">
+<img src="https://cloud.githubusercontent.com/assets/7557398/10121639/447eaa0a-64c4-11e5-97f7-81c753fedda1.jpg" width = "410" height="240">  <img src="https://cloud.githubusercontent.com/assets/7557398/10121640/46969654-64c4-11e5-897f-0298182956b3.jpg" width = "420" height="280">
 
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
 
