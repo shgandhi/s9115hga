@@ -1,6 +1,6 @@
 ##Summary
 
-###(i) Reference: Gordon Fraser, Saarland University and Andrea Arcuri, Simula Research Laboratory, Quality Software (QSIC), 2011 11th International Conference on. IEEE, 2011. [Evolutionary Generation of Whole Test Suites](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6004309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6004309). 
+###(i) Reference: Gordon Fraser, Saarland University and Andrea Arcuri, Simula Research Laboratory, IEEE, 2011. [Evolutionary Generation of Whole Test Suites](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6004309&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6004309). 
 
 ###(ii) Keywords:
 * (ii1) **Search based testing:** It tries to improve the effectiveness and efficiency of testing process by transforming testing objectives into search problem, and applying evolutionary computation in order to solve them.
@@ -32,9 +32,9 @@
     * Aˆ12 for length
    
 * (iii4) **Informative Visualizations:**
- * Compare the effectiveness of test generation tools in achieving other types of coverage criteria such as data flow coverage and mutation testing.
- * Using branch ranking metric for doing the above.
- * Empirically investigate the effectiveness of the feedback loop formed between evolutionary testing and symbolic execution due to the two types of integration and compare it to the two existing integration types in Evacon.
+
+<img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
+<img src="https://cloud.githubusercontent.com/assets/7557398/10121567/6436d38a-64c0-11e5-8cf0-cc505fb7fc53.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121568/6436fe82-64c0-11e5-8cb0-f561c23a24c8.png" width = "420" height="320">
   
 ###(v) Suggested Improvements:
 * (v1) There could have been more subject programs and third party tools in the experiments to further secure against external validity threat.
