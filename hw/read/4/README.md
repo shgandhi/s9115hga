@@ -25,10 +25,8 @@ program. However, it's very difficult to explore all possible program execution 
 
 
 * (iii3) **Informative Visualizations:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
- * _Description & Implementation_ - The authors describe and implement a technique for statically partitioning a symbolic execution tree and distributing the partitions across parallel instances.
- * _Framework Development_ - The authors develop a flexible, extensible framework for parallelizing Java Pathfinder, using a simple client-server model, with coordination and communication across parallel instances of JPF handled by an extension of JPF listeners.
- * _Evaluation_ - The authors evaluate their work in terms of the speedup when exploring a finite symbolic execution
-tree (the time to completely explore a finite symbolic execution tree) and the performance of automatic test generation ( time to generate tests meeting the Modified Condition/Decision Coverage (MC/DC) structural coverage criterion).
+<img src="https://cloud.githubusercontent.com/assets/7557398/10125842/a9b509aa-6550-11e5-9541-347dc13b9923.jpg">
+<img src="https://cloud.githubusercontent.com/assets/7557398/10125841/a7caf38e-6550-11e5-903a-8f9c9d1cb62b.jpg">
 
 * (iii4) **New Results:**
    * Due to similarity between searching for states satisfying coverage obligations and searching for states violating assertions/properties, the authors propose evaluating the partitioning techniques in other contexts such as fault detection.
