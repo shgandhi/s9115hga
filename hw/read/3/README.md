@@ -33,14 +33,14 @@
    
 * (iii4) **Informative Visualizations:**
 
-<img src="https://cloud.githubusercontent.com/assets/7557398/10121639/447eaa0a-64c4-11e5-97f7-81c753fedda1.jpg" width = "410" height="240">  <img src="https://cloud.githubusercontent.com/assets/7557398/10121640/46969654-64c4-11e5-897f-0298182956b3.jpg" width = "420" height="280">
-
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121569/64383824-64c0-11e5-9aa5-dad53a31a7a2.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121566/642c239a-64c0-11e5-822d-b8338c8c573c.png" width = "420" height="320">
 
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121567/6436d38a-64c0-11e5-8cf0-cc505fb7fc53.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121568/6436fe82-64c0-11e5-8cb0-f561c23a24c8.png" width = "420" height="320">
   
-###(v) Suggested Improvements:
-* (v1) There could have been more subject programs and third party tools in the experiments to further secure against external validity threat.
-* (v2) Mention if there was any consequence of not being able to impose time limit on the JUnit Factory on the overall results.
-* (v3) The tables used for comparison could have been replaced by a more insightful visualization.
+###(v) **Suggested Improvements:**
+* (v1) Mention why specifically Mann Whitney U Test and Vargha Delaney effect size were used in statistical evaluation.
+* (v2) Use of performance measures that take into account how difficult it will be to check the correctness of the outputs.
+* (v3) Analysis of the results specific to each case study to more clearly delineate why the proposed approach is better.
 
+###(vi) **Connection to other papers:**
+The work done in this paper forms the basis for _"Combining Search-based and Constraint-based Testing"_, which uses whole suite test generation for GA implementation in a hybrid approach that integrates search based testing with constraint based testing.
