@@ -21,18 +21,16 @@
  * B. Baudry, F. Fleurey, J.-M. J´ez´equel, and Y. Le Traon, “Automatic test cases optimization: a bacteriologic algorithm,” IEEE Software, vol. 22, no. 2, pp. 76–82, Mar. 2005.
  * C. Pacheco and M. D. Ernst, “Randoop: feedback-directed random testing for Java,” in OOPSLA’07: Companion to the 22nd ACM SIGPLAN Conference on Object-oriented Programming Systems and Application. ACM, 2007, pp. 815–816
 
-* (iii3) **Patterns:** 
- * The authors clearly delineated the research questions investigated in the paper, which can be used as benchmark questions for analyzing any test generation tool or framework -
-    * __Utility:__ How does the proposed tool fare against representative test generation tools.
-    * __Demonstrating the need of the solution:__ The proposed framework specifically targets branches that required longer method sequences, the authors demonstrated that certain type of branches needed longer method sequences for optimal branch coverage.
-    * __Identifying other solutions based on uniqueness of the problem solved:__ The authors identified other tools for comparison based on those tools' unique coverage of some branches which couldn't be covered by other tools. This was the basis of shortlisting tools required for achieving optimal branch coverage.
- * The authors carried out comprehensive analysis of the test generation tools that they used for comparison with their propsed Evacon framework. This directs the prospective user to both the (dis)advantages of these tools. 
- * The average branch coverage of the proposed frameworks were found to be lower than the aggregated average of all the other 4 tools combined. This suggested that for some classes, using multiple tools in combination may be more beneficial than using a single tool to achieve optimal coverage.
- * Use of __Branch ranking metric__: Instead of widely used percentages of branch coverage, branch ranking metric is more useful when selecting multiple tools to use in combination among the tools under comparison. It also,
-    * Helps in selecting appropriate tools or their combination for *residual* branch coverage,
-    * Compares relative strength of each tool in a set of tools in terms of branch coverage.
-    * It does not let including a poor tool in tool comparison affect the comparison of tools with relatively better effectiveness.
-  
+* (iii3) **Statistical Tests:** 
+ * The proposed approach "EVOSUITE" and search based testing are based on randomized algorithms, to properly analyze the algorithms the authors followed the guidelines in __A. Arcuri and L. Briand, “A practical guide for using statistical tests to assess randomized algorithms in software engineering,” IEEE ICSE 2011__. The authors ran EVOSUITE against the single branch strategy for each of the 727 public classes, to compare their achieved coverage. Each experiment comparison was repeated 100 times with different seeds for the random number generator.
+ *  **Mann Whitney U Test**- It was used to assess whether the effectiveness of EVOSUITE and single branch based approach were statistically different. 
+ *  **Vargha-Delaney Aˆ12 statistic**- To measure the magnitude of the difference in a standardized way i.e. using the __effect size__; the A^12 statistic was used. In the context of this experiment, the Aˆ12 is an estimation of the probability that, better coverage is obtained upon running EVOSUITE, than running the single branch strategy. When two randomized algorithms were equivalent, then Aˆ12 = 0.5. A high value Aˆ12 = 1 meant that, in all of the 100 runs of EVOSUITE, higher coverage values were obtained than the ones obtained in all of the 100 runs of the single branch strategy.
+ *  Boxplots were used to visualize the comparison between the two approaches by using as a measure -
+   * Average branch coverage
+   * Aˆ12 for coverage
+   * Average length values when A^12 = 0.5
+   * Aˆ12 for length
+   
 * (iii4) **Future Work:**
  * Compare the effectiveness of test generation tools in achieving other types of coverage criteria such as data flow coverage and mutation testing.
  * Using branch ranking metric for doing the above.
