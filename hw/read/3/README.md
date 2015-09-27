@@ -25,7 +25,7 @@
  * The proposed approach "EVOSUITE" and search based testing are based on randomized algorithms, to properly analyze the algorithms the authors followed the guidelines in _A. Arcuri and L. Briand, “A practical guide for using statistical tests to assess randomized algorithms in software engineering,” IEEE ICSE 2011_. The authors ran EVOSUITE against the single branch strategy for each of the 727 public classes, to compare their achieved coverage. Each experiment comparison was repeated 100 times with different seeds for the random number generator.
  *  *Mann Whitney U Test*- It is a non-parametric statistical hypothesis test, i.e. it allows the comparison of two samples with unknown distributions. It was used to assess whether the effectiveness of EVOSUITE and single branch based approach were statistically different. 
  *  *Vargha-Delaney Aˆ12 statistic*- To measure the magnitude of the difference in a standardized way i.e. using the _effect size_; the Aˆ12 statistic was used. In the context of this experiment, the Aˆ12 is an estimation of the probability that, better coverage is obtained upon running EVOSUITE, than running the single branch strategy. When two randomized algorithms were equivalent, then Aˆ12 = 0.5. A high value Aˆ12 = 1 meant that, in all of the 100 runs of EVOSUITE, higher coverage values were obtained than the ones obtained in all of the 100 runs of the single branch strategy.
- *  Boxplots were used to visualize the comparison between the two approaches by using as a measure -
+ *  Boxplots were used to visualize the comparison between the two approaches for all the six case studies by using as a measure -
    * Average branch coverage
     * Aˆ12 for coverage
     * Average length values when Aˆ12 = 0.5
