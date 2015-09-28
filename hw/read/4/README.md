@@ -1,6 +1,6 @@
 ##Summary
 
-###(i) Reference: Kiran Lakhotia, Mark Harman, University College London and Nikolai Tillmann, Jonathan de Halleux, Microsoft Research, Springer, 2010. [FloPSy - Search-Based Floating Point Constraint Solving for Symbolic Execution](http://link.springer.com.prox.lib.ncsu.edu/chapter/10.1007/978-3-642-16573-3_11). 
+###(i) Reference: Kiran Lakhotia, Mark Harman, University College London and Nikolai Tillmann, Jonathan de Halleux, Microsoft Research, Springer, 2010. [FloPSy - Search-Based Floating Point Constraint Solving for Symbolic Execution](http://link.springer.com/chapter/10.1007%2F978-3-642-16573-3_11). 
 
 ###(ii) Keywords:
 * (ii1) **Search Based Software Testing:** In SBST, an optimization algorithm is guided by an objective function which is  defined in terms of a test adequacy criterion to generate test data.
