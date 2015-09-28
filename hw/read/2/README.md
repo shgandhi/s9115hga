@@ -13,7 +13,7 @@
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. The general approach of devising a test case that exercises a particular coverage goal at a time, ignores the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, hence the authors proposed an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
+* (iii1) **Motivation:**  While generating tests from the source code satisfying a certain coverage criteria, the fundamental assumptions are that all coverage goals are equally important, equally difficult to reach and independent of each other. This flawed assumption motivated the authors to challenge the general approach that worked along devising a test case that exercises a particular coverage goal at a time, ignoring the possibility of a coverage goal being infeasible, or difficult to satisfy or causing collateral coverage. These problems cannot be efficiently predicted, which led the authors to propose an approach to mitigate them. Instead of tackling individual coverage goals with distinct test cases, the authors suggested an approach to optimize the entire test suite towards satisfying a coverage criteria.
 
 * (iii2) **Related Work:** 
  * A. Arcuri and X. Yao, _“Search based software testing of object-oriented containers,”_ Information Sciences, vol. 178, no. 15, pp. 3075–3095, 2008.
@@ -38,9 +38,9 @@
 <img src="https://cloud.githubusercontent.com/assets/7557398/10121567/6436d38a-64c0-11e5-8cf0-cc505fb7fc53.png" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10121568/6436fe82-64c0-11e5-8cb0-f561c23a24c8.png" width = "420" height="320">
   
 ###(v) **Suggested Improvements:**
-* (v1) Mention why specifically Mann Whitney U Test and Vargha Delaney effect size were used in statistical evaluation.
-* (v2) Use of performance measures that take into account how difficult it will be to check the correctness of the outputs.
-* (v3) Analysis of the results specific to each case study to more clearly delineate why the proposed approach is better.
+* (v1) The reason for specifically using Mann Whitney U Test and Vargha Delaney effect size for statistical evaluation could have been mentioned.
+* (v2) The performance measures that take into account the difficulty to check the correctness of the outputs could have been used.
+* (v3) There could have been a mention of why specific case studies were chosen, and whether those selected were infact representative of all the possible variation of the input classes.
 
 ###(vi) **Connection to other papers:**
 The work done in this paper forms the basis for _"Combining Search-based and Constraint-based Testing"_, which uses whole suite test generation for GA implementation in a hybrid approach that integrates search based testing with constraint based testing.
