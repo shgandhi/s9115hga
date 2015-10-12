@@ -4,7 +4,9 @@
 **Instructions**
 
     1. Navigate to code/hw/3
-    2. run "./code3.sh"
+    2. run "python birthday.py"
+    3. run "python Employee.py"
+    4. run "python PokerHand.py"
 
 ### Homework 3
 
