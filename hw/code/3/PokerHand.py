@@ -173,9 +173,6 @@ def deal_and_classify(num_hands, cards_in_hand):
         deck.move_cards(hand, cards_in_hand)
         hand.sort()
         label_key = hand.classify()
-        #print label_key
-        #print hand
-        #print " "
         if label_key not in count:
             count[label_key] = 1
         else:
