@@ -2,11 +2,11 @@ from __future__ import division
 from random import randint
 
 #10.15 Ex 8 Part 2
-def birthday_paradox(num_iter):
+def birthday_paradox(num_item, num_iter):
     total_list = []
     for val in range(num_iter):
         birthday_list = []
-        for i in range(23):
+        for i in range(num_item):
             birthday_list.append(randint(1,31))
         total = 0
         if isinstance(birthday_list, list):
@@ -23,4 +23,4 @@ def birthday_paradox(num_iter):
  
 
 if __name__== '__main__':
-    birthday_paradox(1000)    
+    birthday_paradox(23, 1000)    
