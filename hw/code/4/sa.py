@@ -108,6 +108,5 @@ if __name__ == '__main__':
     best_s, best_e = sa()
     tb = datetime.datetime.now()
     print "#Run time %f" % ((ta - tb).microseconds/1000000)
-    print "#Best energy ",best_e
-    
+
     
