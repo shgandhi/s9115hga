@@ -1,7 +1,6 @@
 ##Summary
 
-###(i) Reference: Florian Gross, Gordon Fraser, Andreas Zeller, ACM, 2012. [Search-Based System Testing:
-High Coverage, No False Alarms](http://dl.acm.org/citation.cfm?id=2336762). 
+###(i) Reference: Florian Gross, Gordon Fraser, Andreas Zeller, ACM, 2012. [Search-Based System Testing: High Coverage, No False Alarms](http://dl.acm.org/citation.cfm?id=2336762). 
 
 ###(ii) Keywords:
 * (ii1) **Search Based Software Testing:** In SBST, an optimization algorithm is guided by an objective function which is  defined in terms of a test adequacy criterion to generate test data.
