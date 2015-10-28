@@ -3,13 +3,15 @@
 ###(i) Reference: Gordon Fraser, Andrea Arcuri, IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, 2013. [Whole Test Suite Generation](http://www.computer.org/csdl/trans/ts/2013/02/tts2013020276-abs.html). 
 
 ###(ii) Keywords:
-* (ii1) **Search Based Software Testing:** In SBST, an optimization algorithm is guided by an objective function which is  defined in terms of a test adequacy criterion to generate test data.
+* (ii1) **Search Based Software Engineering:** .
 
-* (ii2) **Dynamic Symbolic Execution:** DSE which is a combination of symbolic and concrete execution uses concrete execution to drive the symbolic exploration of a program, the runtime values produced by symbolic execution are used to simplify path constraints to make them more feasible for constraint solving.
+* (ii2) **Length:** .
 
-* (ii3) **Alternating Variable Method:** AVM is a form of hill climbing. It works by continuously changing an input parameter to a function in isolation. It first constructs a vector of input variables, then explores the "neighbourhood" of each input variable in this vector in turn. If changes in the values of the input variable do not result in an increased fitness, the search considers the next input variable, and so on - restarting from the first input variable if necessary - until no further improvements can be made or test data has been found.
+* (ii3) **Branch Coverage:** .
 
-* (ii4) **Evolution Strategies:** ES falls in the family of evolutionary algorithms. In ES an individual has two components: an object vector which contains the inputs to the function under test and a strategy parameter vector. The strategy parameters control the strength of the mutations of the object vector by evolving themselves, so that the ES can self–adapt to the underlying search landscape.
+* (ii4) **Infeasible Goal**.
+
+* (ii5) **Collateral Coverage**.
 
 ###(iii) Artifacts:
 
