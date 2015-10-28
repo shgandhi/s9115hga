@@ -10,7 +10,7 @@
 * (ii3) **Schema Theory:** According to the Schema Theory those schemata with a better than average fitness will
 receive proportionally more fitness evaluations as the computation of the Genetic Algorithm progresses. ( Achema is a template chromosome that stands for a whole set of individual chromosomes, each of which share some common fixed values)
 
-* (ii4) **Royal Road Theory:** Royal road theory predicts that evolutionary testing that holds the *royal road property, performs well because of the presence of crossover operation such that fitter schemata are given more fitness evaluations as compared to lesser fit schemata. (The royal road property is obeyed if schemas of each order are composable
+* (ii4) **Royal Road Theory:** Royal road theory predicts that evolutionary testing that holds the *royal road property, performs well because of the presence of crossover operation such that fitter schemata are given more fitness evaluations as compared to lesser fit schemata. (The *royal road property is obeyed if schemas of each order are composable
 to produce schemas of the next higher order)
 
 * (ii5) **Memetic Algorithms:** Memetic Algorithms are Evolutionary Algorithms which employ a stage of local search to improve each individual at the end of each generation.
