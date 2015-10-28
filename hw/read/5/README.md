@@ -3,20 +3,24 @@
 ###(i) Reference: Mark Harman and Phil McMinn, IEEE TRANSACTIONS ON SOFTWARE ENGINEERING, VOL. 36, NO. 2, MARCH/APRIL 2010. [A Theoretical and Empirical Study of Search-Based Testing: Local, Global, and Hybrid Search](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5342440&tag=1). 
 
 ###(ii) Keywords:
-* (ii1) **Search Based Software Testing:** In SBST, an optimization algorithm is guided by an objective function which is  defined in terms of a test adequacy criterion to generate test data.
+* (ii1) **Search Based Testing:** The approach of applying search based optimization technique on the problem of software test data generation.
 
-* (ii2) **Dynamic Symbolic Execution:** DSE which is a combination of symbolic and concrete execution uses concrete execution to drive the symbolic exploration of a program, the runtime values produced by symbolic execution are used to simplify path constraints to make them more feasible for constraint solving.
+* (ii2) **Evolutionary Testing:** It is a sub-field of search based testing which uses evolutionary algorithms (most commonly implemented as genetic algorithms) to guide the search.
 
-* (ii3) **Alternating Variable Method:** AVM is a form of hill climbing. It works by continuously changing an input parameter to a function in isolation. It first constructs a vector of input variables, then explores the "neighbourhood" of each input variable in this vector in turn. If changes in the values of the input variable do not result in an increased fitness, the search considers the next input variable, and so on - restarting from the first input variable if necessary - until no further improvements can be made or test data has been found.
+* (ii3) **Schema Theory:** According to the Schema Theory those schemata with a better than average fitness will
+receive proportionally more fitness evaluations as the computation of the Genetic Algorithm progresses. ( Achema is a template chromosome that stands for a whole set of individual chromosomes, each of which share some common fixed values)
 
-* (ii4) **Evolution Strategies:** ES falls in the family of evolutionary algorithms. In ES an individual has two components: an object vector which contains the inputs to the function under test and a strategy parameter vector. The strategy parameters control the strength of the mutations of the object vector by evolving themselves, so that the ES can self–adapt to the underlying search landscape.
+* (ii4) **Royal Road Theory:** Royal road theory predicts that evolutionary testing that holds the *royal road property, performs well because of the presence of crossover operation such that fitter schemata are given more fitness evaluations as compared to lesser fit schemata. (The royal road property is obeyed if schemas of each order are composable
+to produce schemas of the next higher order)
+
+* (ii5) **Memetic Algorithms:** Memetic Algorithms are Evolutionary Algorithms which employ a stage of local search to improve each individual at the end of each generation.
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:**  Dynamic Symbolic Execution and Search Based Software Testing are the most effective approaches for automatic generation of test cases. But both these approaches have their own complementary strength and weaknesses. While DSE is better suited to discover the structure of the input to the system under test, SBST provides a natural way to express coverage based test adequacy criteria as a multi–objective problem. The primary motivation was that -
-  * While some work had been done to combine the two approaches, nothing had been done to mitigate the problem of tackling floating point computations in DSE, which originate from limitations of most constraint solvers. Since the constraint solvers approximate constraints over floating point numbers as constraints over rational numbers, the solutions valid for rational numbers are not always valid when mapped to floating point numbers because of limited precision of computers. 
-
-Thus, the authors approached this problem by devising a framework that handled constraints over floating point variables and proposing a combination of DSE with SBST to improve code coverage in the presence of floating point computations.
+* (iii1) **Motivation:** 
+* (iii2) **Hypotheses**
+  * Global Search is more effective but less efficient
+  * 
 
 * (iii2) **Related Work:** 
  * Inkumsah, K., Xie, T.: _"Evacon: A framework for integrating evolutionary and concolic testing for object-oriented programs"_. In: ASE 2007, pp. 425–428 (2007)
