@@ -27,23 +27,15 @@ Thus, the authors approached this problem by devising a framework that handled c
  * Botella, B., Gotlieb, A., Michel, C.: _"Symbolic execution of floating-point computations"_. Softw. Test, Verif. Reliab 16(2), 97–121 (2006)
 
 
-* (iii3) **Tutorial Materials:** Given below is the tutorial material provided by Microsoft Research for PEX.
-  * ![Getting Started](http://research.microsoft.com/en-us/projects/pex/getstarted.pdf)
+* (iii3) **Tutorial Materials:** Given below is the tutorial material provided by Microsoft Research for Pex.
+  * [Getting Started with Pex](http://research.microsoft.com/en-us/projects/pex/getstarted.pdf)
+  * [Exploring Code with Microsoft Pex](http://research.microsoft.com/en-us/projects/pex/digger.pdf)
+  * [Parameterized Unit Testing with Microsoft Pex](http://research.microsoft.com/en-us/projects/pex/pextutorial.pdf)
+  * [The Pex Forum](http://research.microsoft.com/en-us/projects/pex/)
+  * [Pex Coding Duel For Fun](http://www.pexforfun.com/)
 
 * (iii4) **New Results:**
-   * For benchmark functions, it was observed that 
-      * ES Solver was most effective, achieving 100% block coverage for 5 out of 6 functions. 
-      * AVM failed to reach the Pex goal for the Rosenbrock function, and also fails in 3 out of 30 runs for the Beale function. 
-      * Neither ES or AVM solver achieved full coverage of the Powell function.
-      * It was found that the custom solvers can improve the coverage of Pex for floating point computations
-      * For 3 out of 6 functions Pex was able to achieve 100% block coverage without using any heuristics on top of Z3.
-   * For open source functions, it was observed that 
-      * The coverage with the AVM solver enabled, was less than with the custom solvers disabled.
-      * The ES solver only marginally increased the coverage compared to Pex’s default solvers (i.e. Z3 and randomsearch).
-      * the custom solvers proposed in this paper should only be enabled if the code is known to produce many constraints over floating point variables. In such a case, sufficient resources, in terms of fitness evaluations as well as runtime, should be allocated for the solvers to be effective.
-   * It was also observed how often constraints over floating point variables are a problem for DSE in practice. For Alglib (a numerical analysis and data processing library), over a third of its methods contain constraints over floating point numbers that could not be solved by either Z3 or a random search. For the QLNet (quantitative finance
-operations library) on the other hand, this figure was found to be much smaller at around 3% of its methods.
-  
+
 ###(v) **Suggested Improvements:**
 * (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
 * (v2) The reason could have been mentioned for choosing those specific benchmark and open source functions, and whether the chosen functions were representative of the maximum possible input domain.
