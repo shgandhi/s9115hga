@@ -26,9 +26,11 @@ to produce schemas of the next higher order)
   * Is the performance of the Memetic Algorithm similar with Royal Road branches as for Evolutionary Testing?
   * Do memetic algorithms improve on Evolutionary Testing on non-Royal Road branches, offering similar levels of efficiency on these branches as with Hill Climbing?
  
-* (iii2) **Hypotheses**
-  * Global Search is more effective but less efficient
-  * 
+* (iii2) **Checklist:** 
+  * Predict the suitability of Evolutionary Testing for structural test data generation problems using Royal Road and Schema Theory for Evolutionary Testing.
+  * Empirically validate that Evolutionary Testing performs well for Royal Road functions and this is due to the presence of the crossover operator.
+  * Empirically assess the performance of Evolutionary Testing compared to Hill Climbing and Random Testing.
+  * Empirically assess Hybrid Memetic Algorithm which incorporates Hill Climbing into Evolutionary Testing.
 
 * (iii2) **Related Work:** 
  * W. Miller and D. Spooner, _“Automatic Generation of Floating-Point Test Data,”_ IEEE Trans. Software Eng., vol. 2, no. 3,
@@ -43,23 +45,8 @@ pp. 223-226, Sept. 1976.
  * M. Harman, Y. Hassoun, K. Lakhotia, P. McMinn, and J. Wegener, _“The Impact of Input Domain Reduction on Search-Based Test Data Generation,”_ Proc. ACM SIGSOFT Symp. Foundations of Software Eng., pp. 155-164, 2007.
 
 
-* (iii3) **Informative Visualizations:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
-<img src="https://cloud.githubusercontent.com/assets/7557398/10125842/a9b509aa-6550-11e5-9541-347dc13b9923.jpg">
-<img src="https://cloud.githubusercontent.com/assets/7557398/10125841/a7caf38e-6550-11e5-903a-8f9c9d1cb62b.jpg">
-
-* (iii4) **New Results:**
-   * For benchmark functions, it was observed that 
-      * ES Solver was most effective, achieving 100% block coverage for 5 out of 6 functions. 
-      * AVM failed to reach the Pex goal for the Rosenbrock function, and also fails in 3 out of 30 runs for the Beale function. 
-      * Neither ES or AVM solver achieved full coverage of the Powell function.
-      * It was found that the custom solvers can improve the coverage of Pex for floating point computations
-      * For 3 out of 6 functions Pex was able to achieve 100% block coverage without using any heuristics on top of Z3.
-   * For open source functions, it was observed that 
-      * The coverage with the AVM solver enabled, was less than with the custom solvers disabled.
-      * The ES solver only marginally increased the coverage compared to Pex’s default solvers (i.e. Z3 and randomsearch).
-      * the custom solvers proposed in this paper should only be enabled if the code is known to produce many constraints over floating point variables. In such a case, sufficient resources, in terms of fitness evaluations as well as runtime, should be allocated for the solvers to be effective.
-   * It was also observed how often constraints over floating point variables are a problem for DSE in practice. For Alglib (a numerical analysis and data processing library), over a third of its methods contain constraints over floating point numbers that could not be solved by either Z3 or a random search. For the QLNet (quantitative finance
-operations library) on the other hand, this figure was found to be much smaller at around 3% of its methods.
+* (iii3) **Sampling Procedures:** The authors used nine different programs for their empirical study, of which 38 functions containg 760 branches were studied. The factors that influenced their decision of choosing the projects they studied were -
+  * Input Domain Size: The search space sizes for the programs ranged from 10^5 to 10^524. 
   
 ###(v) **Suggested Improvements:**
 * (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
