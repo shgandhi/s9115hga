@@ -23,11 +23,16 @@ to produce schemas of the next higher order)
   * 
 
 * (iii2) **Related Work:** 
- * Inkumsah, K., Xie, T.: _"Evacon: A framework for integrating evolutionary and concolic testing for object-oriented programs"_. In: ASE 2007, pp. 425–428 (2007)
- * Tonella, P.: _"Evolutionary testing of classes"_. In: ISSTA 2004, pp. 119–128 (2004)
- * Sen, K., Agha, G.: _"CUTE and jCUTE: Concolic unit testing and explicit path model-checking tools"_. In: Ball, T., Jones, R.B. (eds.) CAV 2006. LNCS, vol. 4144, pp. 419–423. Springer, Heidelberg (2006)
- * Majumdar, R., Sen, K.: _"Hybrid concolic testing"_. In: ICSE 2007, pp. 416–426. IEEE Computer Society, Los Alamitos (2007)
- * Botella, B., Gotlieb, A., Michel, C.: _"Symbolic execution of floating-point computations"_. Softw. Test, Verif. Reliab 16(2), 97–121 (2006)
+ * W. Miller and D. Spooner, _“Automatic Generation of Floating-Point Test Data,”_ IEEE Trans. Software Eng., vol. 2, no. 3,
+pp. 223-226, Sept. 1976.
+ * B. Korel, _“Automated Software Test Data Generation,”_ IEEE Trans. Software Eng., vol. 16, no. 8, pp. 870-879, Aug. 1990.
+ * S. Xanthakis, C. Ellis, C. Skourlas, A.L. Gall, S. Katsikas, and K.Karapoulios, _“Application of Genetic Algorithms to Software Testing (Application Des Algorithms Ge´ne´tiques Au Test Des Logiciels),”_ Proc. Fifth Int’l Conf. Software Eng. and Its Applications, pp. 625-636, 1992.
+ * H.-C. Wang and B. Jeng, _“Structural Testing Using Memetic Algorithm,”_ Proc. Second Taiwan Conf. Software Eng., 2006.
+ * P. McMinn, _“Search-Based Software Test Data Generation: A Survey,”_ Software Testing, Verification and Reliability, vol. 14, no. 2, pp. 105-156, 2004.
+ * N. Mansour and M. Salame, _“Data Generation for Path Testing,”_ Software Quality J., vol. 12, no. 2, pp. 121-134, 2004.
+ * M. Xiao, M. El-Attar, M. Reformat, and J. Miller, _“Empirical Evaluation of Optimization Algorithms When Used in Goal- Oriented Automated Test Data Generation Techniques,”_ Empirical Software Eng., vol. 12, no. 2, pp. 183-239, 2007.
+ * M. Harman and P. McMinn, _“A Theoretical & Empirical Analysis of Evolutionary Testing and Hill Climbing for Structural Test Data Generation,”_ Proc. Int’l Symp. Software Testing and Analysis, pp. 73-83, 2007.
+ * M. Harman, Y. Hassoun, K. Lakhotia, P. McMinn, and J. Wegener, _“The Impact of Input Domain Reduction on Search-Based Test Data Generation,”_ Proc. ACM SIGSOFT Symp. Foundations of Software Eng., pp. 155-164, 2007.
 
 
 * (iii3) **Informative Visualizations:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
