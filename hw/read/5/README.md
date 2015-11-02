@@ -17,7 +17,15 @@ to produce schemas of the next higher order)
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:** 
+* (iii1) **Motivation:** Search based testing having got the kind of attention it had, the authors realized that there were some very fundamental questions still unanswered. These questions (below) coupled with the lack of strong empirical results that would use real world programs with large and complex search spaces, motivated the authors to pursue this study.
+  * Which types of search (global and local)  were effective for which type of test data generation scenario?
+  * Does Evolutionary Testing perform well on the Royal Road landscape? How does it compare to a hill climbing algorithm?
+  * How does Evolutionary Testing perform on Royal Road functions when the effects of the crossover operator are removed?
+  * How Evolutionary Testing performs relative to Hill Climbing in the the absence of Royal Roads, and how badly its performance is be affected in a non-Royal Road landscape?
+  * Do hybrid memetic algorithms cover all the branches covered by Evolutionary Tesing and Hill Climbing?
+  * Is the performance of the Memetic Algorithm similar with Royal Road branches as for Evolutionary Testing?
+  * Do memetic algorithms improve on Evolutionary Testing on non-Royal Road branches, offering similar levels of efficiency on these branches as with Hill Climbing?
+ 
 * (iii2) **Hypotheses**
   * Global Search is more effective but less efficient
   * 
