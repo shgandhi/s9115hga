@@ -51,7 +51,7 @@ pp. 223-226, Sept. 1976.
   
 ###(v) **Suggested Improvements:**
 * (v1) The reason for selecting the programs that were selected for the study could have been more clear.
-* (v2) The evaluation metrics - 'Success Rate', and 'Average Number of Evaluations' were defined by the authors using the magic numbers for the number of trials, the authors could have either specified the reason for choosing the number.
+* (v2) The evaluation metrics - 'Success Rate', and 'Average Number of Evaluations' were defined by the authors using the magic numbers for the number of trials, the authors could have specified the reason for choosing the number.
 
 ###(vi) **Connection to other papers:**
 The work done in this paper lays the foundation for the work that has been done till now in Search Based Testing by clearly outlining the problems where evolutionary testing is best fit, and where hill climbing and random testing fit in the picture of Search Based Testing.
