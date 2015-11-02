@@ -45,7 +45,7 @@ pp. 223-226, Sept. 1976.
  * M. Harman, Y. Hassoun, K. Lakhotia, P. McMinn, and J. Wegener, _“The Impact of Input Domain Reduction on Search-Based Test Data Generation,”_ Proc. ACM SIGSOFT Symp. Foundations of Software Eng., pp. 155-164, 2007.
 
 * (iii3) **Sampling Procedures:** The authors used nine different programs for their empirical study, of which 38 functions containg 760 branches were studied. The factors that influenced their decision of choosing the projects they studied were-
-  * Input Domain Size: The search space sizes for the programs ranged from 10<sup>5>/sup> to 10<sup>524</sup>. 
+  * Input Domain Size: The search space sizes for the programs ranged from 10<sup>5</sup> to 10<sup>524</sup>. 
   * Difficuly of the Problem: Each separate branch denoted a different search problem, and its size determined the level of difficulty.
   * Complexity: The code analyzed contained many examples of complex, unstructured control flow, unbounded loops, and computed storage locations in the form of pointers and array access.
   
@@ -54,6 +54,6 @@ pp. 223-226, Sept. 1976.
 * (v2) The evaluation metrics - 'Success Rate', and 'Average Number of Evaluations' were defined by the authors using the magic numbers for the number of trials, the authors could have either specified the reason for choosing the number.
 
 ###(vi) **Connection to other papers:**
-FloPSy combines SBST and DSE for a particular setting of floating point constraints while the authors for _"Combining Search-based and Constraint-based Testing"_, give a more general approach of combining these two automatic test generation approaches. FloPSy which is a search based extension to Microsoft's DSE tool PEX that relies on the native code to have constraints, and is specifically an extension for DSE. The work in _"Combining Search-based and Constraint-based Testing"_ works along these lines, but focusses on improving both SBST and DSE without any hard requirement for constraints in native code.
+The work done in this paper lays the foundation for the work that has been done till now in Search Based Testing by clearly outlining the problems where evolutionary testing is best fit, and where hill climbing and random testing fit in the picture of Search Based Testing.
 
 
