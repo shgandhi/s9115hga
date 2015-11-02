@@ -3,13 +3,14 @@
 ###(i) Reference: Nikolai Tillmann and Jonathan de Halleux, Springer, 2008. [Pex–White Box Test Generation for .NET](http://dl.acm.org/citation.cfm?id=1792798). 
 
 ###(ii) Keywords:
-* (ii1) **Search Based Software Testing:** In SBST, an optimization algorithm is guided by an objective function which is  defined in terms of a test adequacy criterion to generate test data.
+* (ii1) **Parametrized Unit Test:** A method that takes parameters, performs a sequence of method calls that exercise the code-undertest, and asserts properties of the code’s expected behavior.
 
 * (ii2) **Dynamic Symbolic Execution:** DSE which is a combination of symbolic and concrete execution uses concrete execution to drive the symbolic exploration of a program, the runtime values produced by symbolic execution are used to simplify path constraints to make them more feasible for constraint solving.
 
-* (ii3) **Alternating Variable Method:** AVM is a form of hill climbing. It works by continuously changing an input parameter to a function in isolation. It first constructs a vector of input variables, then explores the "neighbourhood" of each input variable in this vector in turn. If changes in the values of the input variable do not result in an increased fitness, the search considers the next input variable, and so on - restarting from the first input variable if necessary - until no further improvements can be made or test data has been found.
+* (ii3) **The Testing Problem:** Given a sequential program (single threaded) P with statements S, compute a set of program
+inputs I such that for all reachable statements s in S there exists an input i in I such that P(i) executes s.
 
-* (ii4) **Evolution Strategies:** ES falls in the family of evolutionary algorithms. In ES an individual has two components: an object vector which contains the inputs to the function under test and a strategy parameter vector. The strategy parameters control the strength of the mutations of the object vector by evolving themselves, so that the ES can self–adapt to the underlying search landscape.
+* (ii4) **A constraint solver:** A program that computes solutions to logic formulas in a given logic
 
 ###(iii) Artifacts:
 
@@ -26,9 +27,8 @@ Thus, the authors approached this problem by devising a framework that handled c
  * Botella, B., Gotlieb, A., Michel, C.: _"Symbolic execution of floating-point computations"_. Softw. Test, Verif. Reliab 16(2), 97–121 (2006)
 
 
-* (iii3) **Informative Visualizations:** The paper is described along the following lines to demonstrate the effectiveness of the proposed technique -
-<img src="https://cloud.githubusercontent.com/assets/7557398/10125842/a9b509aa-6550-11e5-9541-347dc13b9923.jpg">
-<img src="https://cloud.githubusercontent.com/assets/7557398/10125841/a7caf38e-6550-11e5-903a-8f9c9d1cb62b.jpg">
+* (iii3) **Tutorial Materials:** Given below is the tutorial material provided by Microsoft Research for PEX.
+  * ![Getting Started](http://research.microsoft.com/en-us/projects/pex/getstarted.pdf)
 
 * (iii4) **New Results:**
    * For benchmark functions, it was observed that 
