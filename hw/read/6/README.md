@@ -19,7 +19,7 @@ inputs I such that for all reachable statements s in S there exists an input i i
 * (iii4) **Checklist:**
   * _Introduction_ to Pex - How and why Dynamic Symbolic Execution came to be used for Pex.
   * _Pex Implementation_
-    * _Instrumentation_ - The shadow interpreter used by Pex.
+    * _Instrumentation_ - describing the shadow interpreter used by Pex.
     * _Symbolic Representation of Values and Program State_ - how Pex deals with representation of values and program state.
     * _Symbolic Pointers_ and their respresentation in Pex. 
     * _Search Strategy_ employed by Pex, and the reason why it uses that strategy.
@@ -55,6 +55,7 @@ inputs I such that for all reachable statements s in S there exists an input i i
 * (v3) Other coverage criteria such as function, statement and condition coverage could have also been used for the analysis.
 
 ###(vi) **Connection to other papers:**
-FloPSy combines SBST and DSE for a particular setting of floating point constraints while the authors for _"Combining Search-based and Constraint-based Testing"_, give a more general approach of combining these two automatic test generation approaches. FloPSy which is a search based extension to Microsoft's DSE tool PEX that relies on the native code to have constraints, and is specifically an extension for DSE. The work in _"Combining Search-based and Constraint-based Testing"_ works along these lines, but focusses on improving both SBST and DSE without any hard requirement for constraints in native code.
+In _Combining Search-based and Constraint-based Testing_ by Malburg and Fraser, Pex is used as one of the basic DSE tools for comparison of constraint based testing with search based testing. in _Evolutionary Generation of Whole Test Suites_ by Fraser and Arcuri, the idea of targeting a single test goal as by Pex is expanded to incorporate an entire test suite in which
+all test cases are considered at the same time. Whereas in _FloPSy_ (Search-Based Floating Point Constraint Solving for Symbolic Execution) by Lakhotia et al. PEX is extended to use a search-based approach to solve floating point constraints.
 
 
