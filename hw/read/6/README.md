@@ -19,13 +19,13 @@ inputs I such that for all reachable statements s in S there exists an input i i
 * (iii4) **Checklist:**
   * _Introduction_ to Pex - How and why Dynamic Symbolic Execution came to be used for Pex.
   * _Pex Implementation_
-   * _Instrumentation_
-   * _Symbolic Representation of Values and Program State_
-   * _Symbolic Pointers_
-   * _Search Strategy_
-   * _Constraint Solving_
-   * _Pex Architecture_ 
-   * _Limitations_ of Pex by delineating situations where it does not analyze code properly.
+    * _Instrumentation_
+    * _Symbolic Representation of Values and Program State_
+    * _Symbolic Pointers_
+    * _Search Strategy_
+    * _Constraint Solving_
+    * _Pex Architecture_ 
+    * _Limitations_ of Pex by delineating situations where it does not analyze code properly.
   * _Application_ of Pex as Visual Studio add-in. Demonstration of how Pex can analyze unsafe managed .NET code.
   * _Evaluation_ of Pex on a core .NET component that had already been extensively tested over several years.
 
