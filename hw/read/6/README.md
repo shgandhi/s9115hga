@@ -20,15 +20,15 @@ inputs I such that for all reachable statements s in S there exists an input i i
 Thus, the authors approached this problem by devising a framework that handled constraints over floating point variables and proposing a combination of DSE with SBST to improve code coverage in the presence of floating point computations.
 
 * (iii2) **Related Work:** 
- * Anand, S., Pasareanu, C.S., Visser, W.: _Jpf-se: A symbolic execution extension to java pathfinder_. In: Grumberg, O., Huth, M. (eds.) TACAS 2007. LNCS, vol. 4424, pp. 134–138. Springer, Heidelberg (2007)
- * Grieskamp, W., Tillmann, N., Schulte, W.: _XRT - Exploring Runtime for .NET - Architecture and Applications_. In: SoftMC 2005: Workshop on Software Model Checking, July 2005. Electronic Notes in Theoretical Computer Science (2005)
- * Godefroid, P., Klarlund, N., Sen, K.: _DART: directed automated random testing_. SIGPLAN Notices 40(6), 213–223 (2005)
- * Sen, K., Marinov, D., Agha, G.: _Cute: a concolic unit testing engine for c_. In: ESEC/FSE-13: Proceedings of the 10th European software engineering conference held jointly with 13th ACM SIGSOFT international symposium on Foundations of software engineering, pp. 263–272. ACM Press, New York (2005)
- * Sen, K., Agha, G.: _CUTE and jCUTE: Concolic unit testing and explicit path model-checking tools_. In: Ball, T., Jones, R.B. (eds.) CAV 2006. LNCS, vol. 4144, pp. 419–423. Springer, Heidelberg (2006)
- * Cadar, C., Ganesh, V., Pawlowski, P.M., Dill, D.L., Engler, D.R.: _Exe: automatically generating inputs of death_. In: CCS 2006: Proceedings of the 13th ACM conference on Computer and communications security, pp. 322–335. ACM Press, New York (2006)
- * Godefroid, P., Levin, M.Y., Molnar, D.: _Automated whitebox fuzz testing_ . Technical Report MSR-TR-2007-58, Microsoft Research, Redmond, WA (May 2007)
- * Pacheco, C., Lahiri, S.K., Ernst, M.D., Ball, T.: _Feedback-directed random test generation_. In: ICSE 2007, Proceedings of the 29th International Conference on Software Engineering, Minneapolis, MN, USA, May 23–25 (2007)
- * Saff, D., Boshernitsan, M., Ernst, M.D.: _Theories in practice: Easy-to-write specifications that catch bugs_. Technical Report MIT-CSAIL-TR-2008-002, MIT Computer Science and Artificial Intelligence Laboratory, Cambridge, MA, January 14
+ * Anand, S., Pasareanu, C.S., Visser, W.: [Jpf-se: A symbolic execution extension to java pathfinder](http://cs.stanford.edu/people/saswat/research/SymExTool.pdf). In: Grumberg, O., Huth, M. (eds.) TACAS 2007. LNCS, vol. 4424, pp. 134–138. Springer, Heidelberg (2007)
+ * Grieskamp, W., Tillmann, N., Schulte, W.: [XRT - Exploring Runtime for .NET - Architecture and Applications](http://research.microsoft.com/apps/pubs/default.aspx?id=77413). In: SoftMC 2005: Workshop on Software Model Checking, July 2005. Electronic Notes in Theoretical Computer Science (2005)
+ * Godefroid, P., Klarlund, N., Sen, K.: [DART: directed automated random testing](http://research.microsoft.com/en-us/um/people/pg/public_psfiles/pldi2005.pdf). SIGPLAN Notices 40(6), 213–223 (2005)
+ * Sen, K., Marinov, D., Agha, G.: [Cute: a concolic unit testing engine for c](http://mir.cs.illinois.edu/marinov/publications/SenETAL05CUTE.pdf). In: ESEC/FSE-13: Proceedings of the 10th European software engineering conference held jointly with 13th ACM SIGSOFT international symposium on Foundations of software engineering, pp. 263–272. ACM Press, New York (2005)
+ * Sen, K., Agha, G.: [CUTE and jCUTE: Concolic unit testing and explicit path model-checking tools](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.79.2063). In: Ball, T., Jones, R.B. (eds.) CAV 2006. LNCS, vol. 4144, pp. 419–423. Springer, Heidelberg (2006)
+ * Cadar, C., Ganesh, V., Pawlowski, P.M., Dill, D.L., Engler, D.R.: [Exe: automatically generating inputs of death](http://web.stanford.edu/~engler/exe-ccs-06.pdf). In: CCS 2006: Proceedings of the 13th ACM conference on Computer and communications security, pp. 322–335. ACM Press, New York (2006)
+ * Godefroid, P., Levin, M.Y., Molnar, D.: [Automated whitebox fuzz testing](http://research.microsoft.com/en-us/um/people/pg/public_psfiles/ndss2008.pdf) . Technical Report MSR-TR-2007-58, Microsoft Research, Redmond, WA (May 2007)
+ * Pacheco, C., Lahiri, S.K., Ernst, M.D., Ball, T.: [Feedback-directed random test generation](http://people.csail.mit.edu/cpacheco/publications/feedback-random.pdf). In: ICSE 2007, Proceedings of the 29th International Conference on Software Engineering, Minneapolis, MN, USA, May 23–25 (2007)
+ * Saff, D., Boshernitsan, M., Ernst, M.D.: [Theories in practice: Easy-to-write specifications that catch bugs](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.118.2538&rep=rep1&type=pdf). Technical Report MIT-CSAIL-TR-2008-002, MIT Computer Science and Artificial Intelligence Laboratory, Cambridge, MA, January 14
 (2008)
 
 * (iii3) **Tutorial Material:** 
