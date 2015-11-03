@@ -14,10 +14,20 @@ inputs I such that for all reachable statements s in S there exists an input i i
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:**  Dynamic Symbolic Execution and Search Based Software Testing are the most effective approaches for automatic generation of test cases. But both these approaches have their own complementary strength and weaknesses. While DSE is better suited to discover the structure of the input to the system under test, SBST provides a natural way to express coverage based test adequacy criteria as a multi–objective problem. The primary motivation was that -
-  * While some work had been done to combine the two approaches, nothing had been done to mitigate the problem of tackling floating point computations in DSE, which originate from limitations of most constraint solvers. Since the constraint solvers approximate constraints over floating point numbers as constraints over rational numbers, the solutions valid for rational numbers are not always valid when mapped to floating point numbers because of limited precision of computers. 
+* (iii1) **Motivation:** .NET uses dynamic class loading, which makes it difficult to determine the statements of a program ahead of time. The worst case way to determine the reachability of all statements is by using incremental analysis of all possible execution paths in a program, but the analysis of all possible execution paths may take infinite amount of time. Since time is limited, the authors sought motivation from this problem, and aimed for an analysis that could produce test inputs for most reachable statements fast. Another problem that motivated the authors to create Pex was that, most static analysis tools produced false positives (because of conservative assumptions) for programs for which statement semantics were not known ahead of time. To eliminate the possibility of false positives, environment interactions were taken into account by Pex.
 
-Thus, the authors approached this problem by devising a framework that handled constraints over floating point variables and proposing a combination of DSE with SBST to improve code coverage in the presence of floating point computations.
+* (iii4) **Checklist:**
+  * _Introduction_ to Pex - How and why Dynamic Symbolic Execution came to be used for Pex.
+  * _Pex Implementation_
+   * _Instrumentation_
+   * _Symbolic Representation of Values and Program State_
+   * _Symbolic Pointers_
+   * _Search Strategy_
+   * _Constraint Solving_
+   * _Pex Architecture_ 
+   * _Limitations_ of Pex by delineating situations where it does not analyze code properly.
+  * _Application_ of Pex as Visual Studio add-in. Demonstration of how Pex can analyze unsafe managed .NET code.
+  * _Evaluation_ of Pex on a core .NET component that had already been extensively tested over several years.
 
 * (iii2) **Related Work:** 
  * Anand, S., Pasareanu, C.S., Visser, W.: [Jpf-se: A symbolic execution extension to java pathfinder](http://cs.stanford.edu/people/saswat/research/SymExTool.pdf). In: Grumberg, O., Huth, M. (eds.) TACAS 2007. LNCS, vol. 4424, pp. 134–138. Springer, Heidelberg (2007)
@@ -38,12 +48,11 @@ Thus, the authors approached this problem by devising a framework that handled c
   * [The Pex Forum](http://research.microsoft.com/en-us/projects/pex/)
   * [Pex Coding Duel For Fun](http://www.pexforfun.com/)
 
-* (iii4) **New Results:**
 
 ###(v) **Suggested Improvements:**
-* (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
-* (v2) The reason could have been mentioned for choosing those specific benchmark and open source functions, and whether the chosen functions were representative of the maximum possible input domain.
-* (v3) Statistical analysis of the results could have been visually represented for open source libraries as well to give more insightful interpretations.
+* (v1) The knowledge about the reachability of the blocks and arcs could have made a stronger case for percent coverage evaluation.
+* (v2) Pex was tested on a _core .NET component_, more tests on other components could have given a better overview of the kind of problems Pex is most effective in solving.
+* (v3) Other coverage criteria such as function, statement and condition coverage could have also been used for the analysis.
 
 ###(vi) **Connection to other papers:**
 FloPSy combines SBST and DSE for a particular setting of floating point constraints while the authors for _"Combining Search-based and Constraint-based Testing"_, give a more general approach of combining these two automatic test generation approaches. FloPSy which is a search based extension to Microsoft's DSE tool PEX that relies on the native code to have constraints, and is specifically an extension for DSE. The work in _"Combining Search-based and Constraint-based Testing"_ works along these lines, but focusses on improving both SBST and DSE without any hard requirement for constraints in native code.
