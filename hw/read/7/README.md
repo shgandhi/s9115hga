@@ -3,13 +3,13 @@
 ###(i) Reference: Florian Gross, Gordon Fraser, Andreas Zeller, ACM, 2012. [Search-Based System Testing: High Coverage, No False Alarms](http://dl.acm.org/citation.cfm?id=2336762). 
 
 ###(ii) Keywords:
-* (ii1) **Test Case Generation:** .
+* (ii1) **System Testing:**System testing of software or hardware is testing conducted on a complete, integrated system to evaluate the system's compliance with its specified requirements. System testing falls within the scope of black-box testing, and as such, should require no knowledge of the inner design of the code or logic.
 
-* (ii2) **System Testing:**System testing of software or hardware is testing conducted on a complete, integrated system to evaluate the system's compliance with its specified requirements. System testing falls within the scope of black-box testing, and as such, should require no knowledge of the inner design of the code or logic.
+* (ii2) **GUI Testing:** In software engineering, graphical user interface testing is the process of testing a product's graphical user interface to ensure it meets its specifications. To generate a set of test cases, test designers attempt to cover all the functionality of the system and fully exercise the GUI itself.
 
-* (ii3) **GUI Testing:** In software engineering, graphical user interface testing is the process of testing a product's graphical user interface to ensure it meets its specifications. To generate a set of test cases, test designers attempt to cover all the functionality of the system and fully exercise the GUI itself.
+* (ii3) **Test Coverage:**  Test coverage refers to the degree of thoroughness or how well the suite of test cases "covers" or exercises the code.
 
-* (ii4) **Test Coverage:**  Test coverage refers to the degree of thoroughness or how well the suite of test cases "covers" or exercises the code..
+* (ii4) **UI Model:** The UI model represents the knowledge of the possible application behavior. This information is contained in a state machine created from observing actual executions of the application under test. By definition the model only describes a subset of the possible application behavior, namely already observed behavior.
 
 ###(iii) Artifacts:
 
