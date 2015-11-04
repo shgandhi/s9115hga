@@ -37,8 +37,8 @@ test case generation for specification mining benefit from realistic executions.
   * _Feature location:_ It attempts to locate features in code that serve a given concern. With generated realistic executions, dynamic techniques could be used to accurately locate code fragments tied to a particular concept in the user interface or otherwise structured input.
   
 ###(v) **Suggested Improvements:**
-* (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
-* (v2) The reason could have been mentioned for choosing those specific benchmark and open source functions, and whether the chosen functions were representative of the maximum possible input domain.
+* (v1) For the long running tests performed bu authors where Randoop crashed, and hence could not be compared with, another tool such as CUTE, Pex could have been used for comparison.
+* (v2) The reason could have been mentioned for choosing those five study subjects for testing and evaluation purposes.
 * (v3) Statistical analysis of the results could have been visually represented for open source libraries as well to give more insightful interpretations.
 
 ###(vi) **Connection to other papers:**
