@@ -28,7 +28,8 @@
   * _Alternate GUIs:_ Alternate GUIs and platforms such as Mobile phone and touchscreen devices may prove a far more valuable application ground than Java/Swing currently used in the study.
   * _Alternate system layers:_ Alternate system layers besides GUIs could provide alternate handles for providing system inputs, thus exploring the solution to the the question is whether search-based techniques could again discover the relations between input features and code features.
   * _Dynamic specification mining:_ It infers program models from executions. The more executions observed, the more accurate
-the mined models become; infeasible executions, on the other hand, spoil the resulting models.
+the mined models become; infeasible executions, on the other hand, spoil the resulting models. Techniques that leverage
+test case generation for specification mining benefit from realistic executions.
   * _Feature location:_ It attempts to locate features in code that serve a given concern. With generated realistic executions, dynamic techniques could be used to accurately locate code fragments tied to a particular concept in the user interface or otherwise structured input.
   
 ###(v) **Suggested Improvements:**
