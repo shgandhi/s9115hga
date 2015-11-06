@@ -20,7 +20,9 @@
 * (iii3) **Sampling Procedures:** To select an unbiased sample of Java software, the authors decided to go with SourceForge open source development platform, for it was a dominant site of the type having more than 300,000 registered projects at the time of their experiment. Since there were 48,109 Java programming projects at the site at the time, it wasn't possible to apply EVOSUITE (a tool which automatically generates test suites for Java classes, targeting branch coverage - Read Review 2 for details) to all the projects in reasonable time, hence random sampling of data set was performed. For each chosen project the most recent sources from the corresponding source repository were downloaded to build the program. the issues faced here were - empty projects, misclassified projects, old projects relying on unavailable Java APIs. For projects that the authors weren't able to compile, they downloaded the binaries as EVOSUITE did'nt require source code for test generation.The authors had to consider a total of 321 projects until they had a set of 100 projects in binary format, which the authors called [SF100 corpus of classes](http://www.evosuite.org/subjects/sf100/)
 
 * (iii4) **Informative Visualizations:**
+
 <img src="https://cloud.githubusercontent.com/assets/7557398/10985536/f1f9b054-83ef-11e5-9379-42615dcb7b89.jpg" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10985537/f39a31f4-83ef-11e5-86b0-054ff56cd869.jpg" width = "420" height="320">
+
 <img src="https://cloud.githubusercontent.com/assets/7557398/10985538/f5389f78-83ef-11e5-8957-e2e6aab8fcef.jpg" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10985539/f8abf768-83ef-11e5-9cce-0affdf25e85e.jpg" width = "420" height="320">
 
   
