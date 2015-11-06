@@ -3,13 +3,14 @@
 ###(i) Reference: Gordon Fraser, Andrea Arcuri, IEEE, 2012. [Sound Empirical Evidence in Software Testing](http://dl.acm.org/citation.cfm?id=2337245). 
 
 ###(ii) Keywords:
-* (ii1) **Test Case Generation:** .
+* (ii1) ** Unsafe Test Generation:** When tested code interacts with its environment in undesired ways, for example by
+creating or deleting files, test generation for such code can be deemed to be unsafe.
 
-* (ii2) **Unit Testing:** .
+* (ii2) **Unit Testing:** Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation.
 
 * (ii3) **Class Corpus:** A collection of classes.
 
-* (ii4) **Security Exception:** .
+* (ii4) **Test Coverage:** Test coverage refers to the degree of thoroughness or how well the suite of test cases "covers" or exercises the code.
 
 ###(iii) Artifacts:
 
@@ -19,19 +20,16 @@
 
 * (iii3) **Sampling Procedures:** To select an unbiased sample of Java software, the authors decided to go with SourceForge open source development platform, for it was a dominant site of the type having more than 300,000 registered projects at the time of their experiment. Since there were 48,109 Java programming projects at the site at the time, it wasn't possible to apply EVOSUITE (a tool which automatically generates test suites for Java classes, targeting branch coverage - Read Review 2 for details) to all the projects in reasonable time, hence random sampling of data set was performed. For each chosen project the most recent sources from the corresponding source repository were downloaded to build the program. the issues faced here were - empty projects, misclassified projects, old projects relying on unavailable Java APIs. For projects that the authors weren't able to compile, they downloaded the binaries as EVOSUITE did'nt require source code for test generation.The authors had to consider a total of 321 projects until they had a set of 100 projects in binary format, which the authors called [SF100 corpus of classes](http://www.evosuite.org/subjects/sf100/)
 
-* (iii4) **Informative Visualizations:**
+* (iii4) **Informative Visualizations:** The authors presented informative visualizations for projects, classes, and branches falling in the average coverage intervals.
 
-<img src="https://cloud.githubusercontent.com/assets/7557398/10985536/f1f9b054-83ef-11e5-9379-42615dcb7b89.jpg" width = "420" height="320" title="Image (a.)"><img src="https://cloud.githubusercontent.com/assets/7557398/10985537/f39a31f4-83ef-11e5-86b0-054ff56cd869.jpg" width = "420" height="320" title-"Image (b.)"> _(From left to right)_ *__Image (a.)__ For each 10% code coverage interval, the proportion of projects that have an average coverage (averaged out of 10 runs on all their classes) within that interval. Labels show the upper limit (inclusive). For example, the group 40% represent all the projects with average coverage greater than 30% and lower or equal to 40%. __Image (b.)__ For each 10% code coverage interval, the proportion of classes that have an average coverage (averaged out of 10 runs) within that interval. Labels show the upper limit (inclusive). For example, the group 40% represent all the classes with average coverage greater than 30% and lower or equal to 40%.*
+<img src="https://cloud.githubusercontent.com/assets/7557398/10985536/f1f9b054-83ef-11e5-9379-42615dcb7b89.jpg" width = "420" height="320" title="Image (a.)"><img src="https://cloud.githubusercontent.com/assets/7557398/10985537/f39a31f4-83ef-11e5-86b0-054ff56cd869.jpg" width = "420" height="320" title-"Image (b.)"> _(From left to right)_ *__Image (a.)__ For each 10% code coverage interval, the proportion of projects that have an average coverage within that interval. __Image (b.)__ For each 10% code coverage interval, the proportion of classes that have an average coverage (averaged out of 10 runs) within that interval.*
 
-<img src="https://cloud.githubusercontent.com/assets/7557398/10985538/f5389f78-83ef-11e5-8957-e2e6aab8fcef.jpg" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10985539/f8abf768-83ef-11e5-9cce-0affdf25e85e.jpg" width = "420" height="320">_(From left to right)_ *__Image (c.)__ Average number of branches of classes within each 10% code coverage interval. Classes in the 90%-100% coverage range are the smallest, and thus potentially “easiest” classes. __Image (d.)__ Average number of threads for classes within each 10% code coverage interval: Multi-threaded code does not per se inhibit coverage.*
-
+<img src="https://cloud.githubusercontent.com/assets/7557398/10985538/f5389f78-83ef-11e5-8957-e2e6aab8fcef.jpg" width = "420" height="320"><img src="https://cloud.githubusercontent.com/assets/7557398/10985539/f8abf768-83ef-11e5-9cce-0affdf25e85e.jpg" width = "420" height="320">_(From left to right)_ *__Image (c.)__ Average number of branches of classes within each 10% code coverage interval. Classes in the 90%-100% coverage range are the smallest, and thus potentially “easiest” classes. __Image (d.)__ Average number of threads for classes within each 10% code coverage interval.*
   
 ###(v) **Suggested Improvements:**
-* (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
-* (v2) The reason could have been mentioned for choosing those specific benchmark and open source functions, and whether the chosen functions were representative of the maximum possible input domain.
-* (v3) Statistical analysis of the results could have been visually represented for open source libraries as well to give more insightful interpretations.
+* (v1) To account for the randomness of the evolutionary search, the authors applied EVOSUITE to each of the selected case study objects 10 times, the reason for the selection of that number could have been mentioned.
+* (v2) The process of sampling of code for selection for SF100 case study could have been more detailed.
 
 ###(vi) **Connection to other papers:**
-FloPSy combines SBST and DSE for a particular setting of floating point constraints while the authors for _"Combining Search-based and Constraint-based Testing"_, give a more general approach of combining these two automatic test generation approaches. FloPSy which is a search based extension to Microsoft's DSE tool PEX that relies on the native code to have constraints, and is specifically an extension for DSE. The work in _"Combining Search-based and Constraint-based Testing"_ works along these lines, but focusses on improving both SBST and DSE without any hard requirement for constraints in native code.
-
+The proposed approach evaluates the search-based software testing tool _EVOSUITE_ proposed in _Evolutionary Generation of Whole Test Suites_ by Fraser and Arcuri, when applied to test data generation for open source projects for randomly selected 100 Java projects from SourceForge.
 
