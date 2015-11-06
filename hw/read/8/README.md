@@ -3,7 +3,7 @@
 ###(i) Reference: Gordon Fraser, Andrea Arcuri, IEEE, 2012. [Sound Empirical Evidence in Software Testing](http://dl.acm.org/citation.cfm?id=2337245). 
 
 ###(ii) Keywords:
-* (ii1) ** Unsafe Test Generation:** When tested code interacts with its environment in undesired ways, for example by
+* (ii1) **Unsafe Test Generation:** When tested code interacts with its environment in undesired ways, for example by
 creating or deleting files, test generation for such code can be deemed to be unsafe.
 
 * (ii2) **Unit Testing:** Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation.
