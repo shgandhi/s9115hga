@@ -15,18 +15,24 @@
 
 ###(iii) Artifacts:
 
-* (iii1) **Motivation:**  
+* (iii1) **Motivation:** The conventional approach in the literature of generating a test case for each coverage goal and then to combine them in a single test suite, poses a lot of problems, namely - collateral coverage, varying difficulty levels for coverage from one target to another, and infeasibility of coverage goals. Furthermore, this leads to the question of properly allocating testing budget (e.g., the maximum total time allowed for testing by the user) used for each target, and redistributing such budget to other uncovered targets when the current target is covered before its budget is fully consumed. This motivated the authors to evaluate the approach that improves upon the current approach of targeting one goal at a time.
 
-* (iii2) **Related Work:** 
+* (iii2) **Tutorials:** Extensive documentation has been made available for working with EVOSUITE at http://www.evosuite.org/documentation/
 
-* (iii3) **Informative Visualizations:** 
+* (iii3) **Future Work:**
+  * Combinination of search-based test generation with dynamic symbolic execution, and search optimizations such as testability transformation or local search to further improve the achieved coverage.
+  * Integration of enhancements in the literature of search algorithms and their evaluation in EVOSUITE, as, for example, island models and adaptive parameter control.
+  * Investigation of ways to support the developer by automatically producing effective assertions for mitigating the _oracle problem_ and, making the produced test cases more readable for ease of understanding.
 
 * (iii4) **New Results:**
+  * Strong statistical evidence show that the EVOSUITE approach yields significantly better results (i.e., either higher coverage or, if the same coverage, then smaller test suites) compared to the traditional approach of targeting each testing goal independently.
+  * In some cases, EVOSUITE achieved up to 188 times higher coverage on average, and test suites that were 62 percent
+smaller while maintaining the same structural coverage.
+  * Running EVOSUITE with a constrained budget (1 million statement executions during the search, up to a
+maximum 10 minutes timeout) resulted in 83 percent of coverage on average on the case study under consideration.
  
 ###(v) **Suggested Improvements:**
-* (v1) The experiments for benchmark functions could have been repeated for variable number of iterations to account for the inherent stochastic behavior of meta-heuristics used in custom solvers.
-* (v2) The reason could have been mentioned for choosing those specific benchmark and open source functions, and whether the chosen functions were representative of the maximum possible input domain.
-* (v3) Statistical analysis of the results could have been visually represented for open source libraries as well to give more insightful interpretations.
+* (v1) The performance EVOSUITE could have been compared with other tools in literature, to get a better ranking of the tool and the approach of _whole test suite generation_ as compared to the existing tools.
 
 ###(vi) **Connection to other papers:**
 This paper extends the work done _"Evolutionary Generation of Whole Test Suites by Fraser and Arcuri"_ by -
