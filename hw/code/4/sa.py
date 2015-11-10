@@ -62,7 +62,7 @@ def sa():
     sb, eb = s, e
     
     #constants
-    kmax = 1000
+    kmax = 10000
     emax = -.1
     k = 0
     t = k/kmax
@@ -90,11 +90,11 @@ def sa():
             output += "?"
             drunk_jump += 1
           
+        else:
+            output += "."
             
-        output += "."
-            
-        if k % 25 == 0: 
-            print "eb = %6f, ? = %2d, + = %2d, %s" % (eb, drunk_jump, better_jump, output)
+        if k % 50 == 0: 
+            print "eb = %6f | ? = %2d | + = %2d | %s" % (eb, drunk_jump, better_jump, output)
             output = " "
             drunk_jump = 0
             better_jump = 0
