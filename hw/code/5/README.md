@@ -10,12 +10,12 @@
 
 **1. Params**
 
-Max Trials = 100,
-Max Changes = 50,
-p = 0.5,
-Steps = 100,
-Threshold = 100,
-Iterations for generating baseline min and max = 1000
+Max Trials = 100,  
+Max Changes = 50,  
+p = 0.5,  
+Steps = 100,  
+Threshold = 100,  
+Iterations for generating baseline min and max = 1000  
 
 **2. Output for MWS for Osyczka2 model**
 
@@ -25,7 +25,6 @@ Iterations for generating baseline min and max = 1000
 
 **2. Solution**
 
-_Best Solution_: (2, 4, 3, 4, 4, 9)
-
+_Best Solution_: (2, 4, 3, 4, 4, 9)  
 _Corresponding Best Score_: 1.00930232558
 
