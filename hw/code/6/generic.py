@@ -220,20 +220,12 @@ def mws(model):
             step_min = model.min_x
         increment = (step_max - step_min)/steps
         for i in xrange(steps):
-            #print "here", i, steps
-            #print "mut", mutated_neigh, "inc", int(step_min + increment), "xval", x_val
             mutated_neigh[k] = int(step_min + increment*i)
-            #print "mut", mutated_neigh, "inc", int(step_min + increment*i), "xval", x_val
             mutated_neigh = model.ok(mutated_neigh)
             mutant_e = model.aggregator(mutated_neigh)
             best_e = model.aggregator(best_neigh)
-            #print mutated_neigh, best_neigh
-            #print mutant_e!= best_e
             if mutant_e > best_e:
-                #print "here"
                 best_neigh = mutated_neigh
-        #print "out"
-        #print best_neigh
         return best_neigh
     
     
@@ -256,9 +248,8 @@ def mws(model):
     print "Max trials = %d, Max changes = %d, p = %0.2f, threshold = %d" % (max_tries, max_changes, p, threshold)
     print "-"*120
     for i in range(max_tries):
+        
         x_vec, x_score = model.solution()
-        #print x_vec, x_score
-        #print x_vec, score
         for j in range(max_changes):
             c = randrange(0, len(init_solution))
             if x_score > threshold:
@@ -271,12 +262,10 @@ def mws(model):
                 
             else:
                 out_x = max_score_local(x_vec, c)
-                #print out_x, x_vec
                 if out_x == x_vec:
                     output += "."
                     better_count += 1
                 else:
-                    #print "here?"
                     output += "+"
                     x_vec = out_x
                     best_count += 1
@@ -332,10 +321,8 @@ def sa(model):
     print "-"*120
 
     while k < kmax and e > emax:
-        #print "I am here"
         sn, en = model.solution()
-        #print sn, en
-        
+
         if en < eb:
             eb = en
             sb = sn
