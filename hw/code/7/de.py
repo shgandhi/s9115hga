@@ -159,17 +159,13 @@ def de(model):
     """
     Returns best solution and energy after all runs
     """
-    max_tries = 50
-    np = 50
+    max_tries = 1000
+    np = 100
     extrapolate_amt = 0.75
     crossover_prob = 0.3
     epsilon = 0.01
     k = 0
     j = 0
-    output = " "
-    better_count = 0
-    confused_count = 0
-    best_count = 0
     threshold = 0
     
     
@@ -185,9 +181,10 @@ def de(model):
         
     def extrapolate(three_neighbors_index):
         solution = []
+        i = 0
         for k in xrange(len(model.min_x)):
-            mutate = (frontier_x[three_neighbors_index[0]][k] + 0.75 * \
-                (frontier_x[three_neighbors_index[1]][k] - frontier_x[three_neighbors_index[2]][k]))
+            mutate = (frontier_x[three_neighbors_index[i]][k] + 0.75 * \
+                (frontier_x[three_neighbors_index[i+1]][k] - frontier_x[three_neighbors_index[i+2]][k]))
             if mutate >= model.min_x[k] and mutate <= model.max_x[k]:
                 solution.append(mutate)
             else:
@@ -242,35 +239,28 @@ def de(model):
                     x_vals[index] = mutant_x
                     e_vals[index] = mutant_e
                     temp += "+"
-                    best_count += 1
-        
+
             else:                
                 get_solution = extrapolate(get_neighbors)
                 if model.ok(get_solution):
-                    #check here
-                    x_vals[j] = get_solution
-                    unnorm_e, e_vals[j] = model.get_energy(get_solution)
+                    x_vals[index] = get_solution
+                    unnorm_e, e_vals[index] = model.get_energy(get_solution)
                     current_e = model.get_energy(get_solution)
                     temp = "+"
-                    best_count += 1
-    
+
             if current_e < eb and current_e >= threshold:
                 temp = "?"
-                confused_count += 1
                 eb = current_e
-                sb = x_vals[j]
-
+                sb = x_vals[index]
+            
+            j = j + 1
             total_print += temp
-            if k % 50 == 0: 
+            if j % 25 == 0: 
                 print "eb = %6f | %s" % (eb, total_print)
                 total_print = " "
-                better_count = 0
-                confused_count = 0
-                best_count = 0
-            k = k + 1
     print "-"*120
     print "Best solution: ", sb
-    print "Best energy: ", sb
+    print "Best energy: ", eb
     return frontier_x
     
 if __name__ == '__main__':
