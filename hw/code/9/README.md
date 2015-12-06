@@ -1,4 +1,15 @@
 ##Hyper Parameter Optimization for DTLZ for 3 objectives
+
+#### s9115hga - CSC 791 Respository
+    sgandhi3@ncsu.edu
+    sramakr6@ncsu.edu
+    
+**Instructions**
+
+    1. Navigate to code/hw/9
+    2. run "python ga.py"
+
+#### Code 9
 --------------------------------------------------------------------------------------------------------------------------------------
 _The report is divided in three sections:_
 
