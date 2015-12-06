@@ -23,16 +23,15 @@ _The report is divided in three sections:_
 --------------------------------------------------------------------------------------------------------------------------------------
 **I. Frontier visualization for DTLZ 1,3, 5, 7 for 3 objective 10 decisions.**
 The following figures show the change in the frontier formed by DTLZ 1, 3, 5, and 7. For each of the DTLZs the first figure shows the baseline frontier and the second figure shows the final frontier. The parameters finally used were decided after running the GA with different configuration, and observing the results keeping in mind the feasibility of the runs. The parameters used were -
+
 1. Number of Generations = 500
 2. Number of Candidates = 100
 3. Number of Decisions = 10
 4. Number of objectives = 3
 
-**DTLZ 1 - _Baseline Era_**
-<img src = "https://cloud.githubusercontent.com/assets/7557398/11612920/8ff35c08-9bdb-11e5-8cf1-93882a67f9d9.png" width = "420" height="320">
+**DTLZ 1 - _Baseline Era_ and _Final Era_**
 
-**DTLZ 1 - _Final Era_**
-<img src = "https://cloud.githubusercontent.com/assets/7557398/11612925/9008310a-9bdb-11e5-9969-826b12de8dea.png" width = "420" height="320">
+<img src = "https://cloud.githubusercontent.com/assets/7557398/11612920/8ff35c08-9bdb-11e5-8cf1-93882a67f9d9.png" width = "420" height="320"> <img src = "https://cloud.githubusercontent.com/assets/7557398/11612925/9008310a-9bdb-11e5-9969-826b12de8dea.png" width = "420" height="320">
 
 **DTLZ 3 - _Baseline Era_**
 <img src = "https://cloud.githubusercontent.com/assets/7557398/11612919/8ff20088-9bdb-11e5-9efb-6ba07593337c.png" width = "420" height="320">
