@@ -1,6 +1,7 @@
 ##Hyper Parameter Optimization for DTLZ for 3 objectives
 
 #### s9115hga - CSC 791 Respository
+#####Contributers -
     sgandhi3@ncsu.edu
     sramakr6@ncsu.edu
     
