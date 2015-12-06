@@ -42,6 +42,7 @@ The following figures show the change in the frontier formed by DTLZ 1, 3, 5, an
 <img src = "https://cloud.githubusercontent.com/assets/7557398/11612922/8ff7c55e-9bdb-11e5-83f4-444601268bb0.png" width = "420" height="320"> <img src = "https://cloud.githubusercontent.com/assets/7557398/11612923/8ffbdcca-9bdb-11e5-9bdb-b43a4367cf21.png" width = "420" height="320">
 
 **DTLZ 7 - _Baseline Era_ and _Final Era_**
+
 <img src = "https://cloud.githubusercontent.com/assets/7557398/11612924/8ffd14e6-9bdb-11e5-8fae-f141f34521c7.png" width = "420" height="320"> <img src = "https://cloud.githubusercontent.com/assets/7557398/11612918/8ff0e478-9bdb-11e5-9a9a-6c2b86ff3200.png" width = "420" height="320">
 
 --------------------------------------------------------------------------------------------------------------------------------------
