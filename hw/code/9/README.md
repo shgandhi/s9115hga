@@ -1,4 +1,4 @@
-##Hyper Parameter Optimization for DTLZ for 3 objectives
+##Hyper Parameter Optimization for DTLZ
 
 #### s9115hga - CSC 791 Respository
 #####Contributers -
