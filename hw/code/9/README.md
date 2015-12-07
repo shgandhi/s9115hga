@@ -11,32 +11,29 @@
     2. run "python ga.py"
     
 ###Abstract
-###Introduction
+    Genetic Algorithm are often used for solving optimization problems, it uses a natural selection process that mimics biological
+    evolution. This coding project implements genetic alorithm on DTLZ 1, 3, 5, and 7 models. To visualize how genetic algorithm
+    works, we first implement GA on DTLZ 1 with 500 decisions and 3 objectives. This is followed by the implementation on DTLZ 1, 3,5
+    and 7 with 2, 4, 6,8 objectives and 10, 20, 40 decisions. We used From Hell distance, and hypervolume metrics to quantify the
+    improvement in population in the objective space.
+    
+###Objective
+The objective of this project is to understand and compare the performance of GA on four variants of the DTLZ model. This is done by implementing GA with the default parameters for probability of mutation, crossover, select, number of candidates and number of generations. The report is divided into five sections, starting with the description of genetic algorithm, its implementation, followed by results, threat to validity and future work.
+
 ###Genetic Algorithm
+Genetic Algorithm starts by initializing a population with fixed number of candidates, from that population it selects two parents by a select method e.g. binary domination, roulette wheel etc.. It then swaps the parent candidates, a process also known as crossover, followed by mutating the children generated as the result of crossover. If the generated children is fitter than the previous population candidates, it appends it to the population. To decide which candidates go into the next generation, all the candidates in the resulting population are sorted based on their scores, and any x% of best candidates are retained. We can also add a few unfit candidates to the next generation to maintain the diversity of the population. This generation is then used as a base population to select parents, and the whole process is repeated till the population converges and terminates early or till the maximum number of generations are reached.
+    
 ###Implementation
-###Results
-###Threats to Validity
-###Future Work
-###References
+The implementation of the genetic algorithm is based on the pseudo code mentioned in [1]. With the following modifications -
+1. All the parameters are set to the values as given in the project specification.
+2. **Type 1 comparison** is used twice, first for selection of parent population for which we employ binary domination, and second for selction of fitter child after mutation, here we employ continuous domination. The methods are implemented as in [2]
+3. **Type 2 comparison** is used for early termination, and is implented using Krall's BStop method, and checked every 100 generations.
+3. One point crossover is used to implement the crossover method.
+4. **Pruning** is done every generation, where we retain 90% good candidates, and 10% bad candidates. In every generation the resultant population is sorted using CDOM, and then 90% candidates from the best end and 10% candidates from the bad end are kept in i+1th generation.
 
-#### Code 9
+To visualize the working of GA on DTLZ we first implemented it on DTLZ 1 with 10 decisions, and 3 objectives for 500 candidates and 100 generations. Though we were not able to see the proper frontier, we did see the solutions getting converge in the objective space. The visualizations can be seen below - 
+
 --------------------------------------------------------------------------------------------------------------------------------------
-_The report is divided in three sections:_
-
-  _I. Frontier visualization for DTLZ 1,3, 5, 7 for 3 objective 10 decisions._
-  
-  _II. Divergence of the final frontier from the frontier formed by baseline population for DTLZ 1, 3 , 5 and 7 for 2, 4, 6, 8 objectives and 10, 20, 40 decisions, using default parameters for GA._
-  
-  _III. Hypervolume calculation for the final frontiers for DTLZ 1, 3 , 5 and 7 for 2, 4, 6, 8 objectives and 10, 20, 40 decisions, using default parameters for GA._
-  
---------------------------------------------------------------------------------------------------------------------------------------
-**I. Frontier visualization for DTLZ 1,3, 5, 7 for 3 objective 10 decisions.**
-The following figures show the change in the frontier formed by DTLZ 1, 3, 5, and 7. For each of the DTLZs the first figure shows the baseline frontier and the second figure shows the final frontier. The parameters finally used were decided after running the GA with different configuration, and observing the results keeping in mind the feasibility of the runs. The parameters used were -
-
-1. Number of Generations = 500
-2. Number of Candidates = 100
-3. Number of Decisions = 10
-4. Number of objectives = 3
 
 **DTLZ 1 - _Baseline Era_ and _Final Era_**
 
@@ -55,6 +52,8 @@ The following figures show the change in the frontier formed by DTLZ 1, 3, 5, an
 <img src = "https://cloud.githubusercontent.com/assets/7557398/11612924/8ffd14e6-9bdb-11e5-8fae-f141f34521c7.png" width = "420" height="320"> <img src = "https://cloud.githubusercontent.com/assets/7557398/11612918/8ff0e478-9bdb-11e5-9a9a-6c2b86ff3200.png" width = "420" height="320">
 
 --------------------------------------------------------------------------------------------------------------------------------------
+
+###Results
 
 **II. Divergence**
 
@@ -75,3 +74,9 @@ To quantify the change in the frontier from the baseline population, we used the
 **III. Hypervolume calculation**
 
 ![Hypervolume](https://cloud.githubusercontent.com/assets/7557398/11613520/e42962d4-9bf1-11e5-827d-38cf49876b0a.JPG)
+
+###Threats to Validity
+###Future Work
+###References
+1. [Clever Algorithms - GA pseudo code](http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html)
+2. [Less Than](https://github.com/txt/mase/blob/master/lessthan.md)
