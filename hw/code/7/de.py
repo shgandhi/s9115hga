@@ -56,10 +56,12 @@ class Model(object):
         Input: x_list
         Output: valid x vector
         """
+        #print "is ok"
         isPassed = self.generate_chk_constraints(x_list)
         while not isPassed:
             x_list = self.random_x_gen()
             isPassed = self.generate_chk_constraints(x_list)
+            #print isPassed
         return x_list
         
     def aggregator(self, x_list):
@@ -77,6 +79,7 @@ class Model(object):
         raise NotImplementedError("Must override objectives()")
         
     def find_min_max(self, iterations = 10):
+        #print "in min max"
         for _ in xrange(iterations):
             while True:
                 solution = self.random_x_gen()
@@ -90,11 +93,41 @@ class Model(object):
                 
             if curr_agg < self.min_agg:
                 self.min_agg = curr_agg
+            #print self.min_agg, self.max_agg
         return self.min_agg, self.max_agg
             
     def normalize(self, energy, min_energy, max_energy):
         norm_energy = (energy - min_energy)/(max_energy - min_energy)
         return norm_energy
+
+class Schaffer(Model):
+    def __init__(self):
+        Model.__init__(self)
+        self.min_x = -10**5
+        self.max_x = 10**5
+        
+    def objectives(self, x):
+        f1 = (x[0])**2
+        f2 = (x[0]-2)**2
+        return(f1, f2)
+        
+    def solution(self):
+        min_energy, max_energy = self.find_min_max()
+        x = self.ok(self.random_x_gen())
+        energy_x = self.aggregator(x)
+        norm_energy = self.normalize(energy_x, min_energy, max_energy)
+        return x, norm_energy
+        
+    def mutate_solution(self, x, k = 0):
+        min_energy, max_energy = self.find_min_max()
+        old_x = x
+        mutate_vector = self.random_x_gen()
+        old_x[k] = mutate_vector[k]
+        new_x = self.ok(old_x)
+        energy_x = self.aggregator(new_x)
+        norm_energy = self.normalize(energy_x, min_energy, max_energy)
+        return new_x, norm_energy
+
 
 class Osyczka2(Model):
     def __init__(self):
@@ -183,13 +216,15 @@ class Kursawe(Model):
 class Golinski(Model):
     def __init__(self):
         Model.__init__(self)
-        self.min_x = [2.6, 0.7, 17.0, 7.3, 1, 2.9, 5.0]
-        self.max_x = [3.6, 0.8, 5, 28.0, 8.3, 3.9, 5.5]
+        self.min_x = [2.6, 0.7, 17.0, 7.3, 7.3, 2.9, 5.0]
+        self.max_x = [3.6, 0.8, 28.0, 8.3, 8.3, 3.9, 5.5]
         
     def generate_chk_constraints(self, x_list):
+        #print x_list
         x1, x2, x3, x4, x5, x6, x7 = x_list
-        if x6 or x2 or x3 or x7 == 0:
-            return False
+        #if x6 or x2 or x3 or x7 == 0:
+        #    return False
+        #print "here"
         f2 = sqrt((745.0*x4/(x2*x3))**2 + 1.69*(10**7))/(0.1*(x6**3))
         a = 745.0*x5/(x2*x3)
         b = 1.575 * (10**8)
@@ -205,11 +240,28 @@ class Golinski(Model):
         c9 = 1.9 - x5 + 1.1*x7
         c10 = f2
         c11 = sqrt(a**2 + b)/(0.1*(x7**3))
-        if c1 <= 0 and c2 <=  0 and c3 <= 0 and c4 <= 0 and c5 <= 0 and c6 <= 0\
-         and c7 <= 0 and c8 <= 0 and c9 <=0 and c10 <= 1300 and c11 <= 1100:
-            return True
-        else:
+        if c1 > 0:
             return False
+        if c3 > 0:
+            return False
+        if c4 > 0:
+            return False
+        if c5 > 0:
+            return False
+        if c6 > 0:
+            return False
+        if c7 > 0:
+            return False
+        if c8 > 0:
+            return False
+        if c9 > 0:
+            return False
+        if c10 > 1300:
+            return False
+        if c11 > 1100:
+            return False
+        
+        return True
         
     def objectives(self, x):
         x1, x2, x3, x4, x5, x6, x7 = x
@@ -219,10 +271,12 @@ class Golinski(Model):
         return(f1, f2)
         
     def solution(self):
+        #print "in sol"
         min_energy, max_energy = self.find_min_max()
         x = self.ok(self.random_x_gen())
         energy_x = self.aggregator(x)
         norm_energy = self.normalize(energy_x, min_energy, max_energy)
+        #print x, norm_energy
         return x, norm_energy
         
     def get_energy(self, x):
@@ -236,6 +290,7 @@ class Golinski(Model):
         old_x = x
         mutate_vector = self.random_x_gen()
         old_x[k] = mutate_vector[k]
+        #print x, "in mutate", mutate_vector, k
         new_x = self.ok(old_x)
         energy_x = self.aggregator(new_x)
         norm_energy = self.normalize(energy_x, min_energy, max_energy)
@@ -264,7 +319,7 @@ def mws(model):
             step_min = model.min_x
         increment = (step_max - step_min)/steps
         for i in xrange(steps):
-            mutated_neigh[k] = int(step_min + increment*i)
+            mutated_neigh[k] = step_min + increment*i
             mutated_neigh = model.ok(mutated_neigh)
             mutant_e = model.aggregator(mutated_neigh)
             best_e = model.aggregator(best_neigh)
@@ -283,6 +338,7 @@ def mws(model):
     confused_count = 0
     best_count = 0
     init_solution, init_score = model.solution()
+    #print init_solution, init_score
     print "#"*120
     print "Running MWS for ", type(model).__name__
     print "#"*120
@@ -403,7 +459,7 @@ def de(model):
     """
     Returns best solution and energy after all runs
     """
-    max_tries = 1000
+    max_tries = 100
     np = 100
     extrapolate_amt = 0.75
     crossover_prob = 0.3
@@ -468,10 +524,10 @@ def de(model):
         if eb == threshold:
             break
         
+        
         for index, s in enumerate(x_vals):
             e = e_vals[index]
             get_neighbors = find_replacement(index)
-            #print get_neighbors
             mutant_x = x_vals[get_neighbors[0]]
             mutant_e = e_vals[get_neighbors[0]]
             current_e = e
@@ -511,5 +567,5 @@ if __name__ == '__main__':
     print "Generic Experiments"
     
     for model in [Golinski]:
-        for optimizer in [de]:
+        for optimizer in [sa, mws, de]:
             optimizer(model())
