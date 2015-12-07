@@ -1,4 +1,4 @@
-##Hyper Parameter Optimization for DTLZ
+##A Simple Standard Genetic Algorithm
 
 #### s9115hga - CSC 791 Respository
 #####Contributers -
@@ -9,6 +9,15 @@
 
     1. Navigate to code/hw/9
     2. run "python ga.py"
+    
+###Abstract
+###Introduction
+###Genetic Algorithm
+###Implementation
+###Results
+###Threats to Validity
+###Future Work
+###References
 
 #### Code 9
 --------------------------------------------------------------------------------------------------------------------------------------
