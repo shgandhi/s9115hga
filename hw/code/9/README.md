@@ -11,11 +11,11 @@
     2. run "python ga.py"
     
 ###Abstract
-    Genetic Algorithm are often used for solving optimization problems, it uses a natural selection process that mimics biological
-    evolution. This coding project implements genetic alorithm on DTLZ 1, 3, 5, and 7 models. To visualize how genetic algorithm
-    works, we first implement GA on DTLZ 1 with 500 decisions and 3 objectives. This is followed by the implementation on DTLZ 1, 3,5
-    and 7 with 2, 4, 6,8 objectives and 10, 20, 40 decisions. We used From Hell distance, and hypervolume metrics to quantify the
-    improvement in population in the objective space.
+_Genetic Algorithm are often used for solving optimization problems, it uses a natural selection process that mimics biological_
+_evolution. This coding project implements genetic alorithm on DTLZ 1, 3, 5, and 7 models. To visualize how genetic algorithm_
+_works, we first implement GA on DTLZ 1 with 500 decisions and 3 objectives. This is followed by the implementation on DTLZ 1, 3,5_
+_and 7 with 2, 4, 6,8 objectives and 10, 20, 40 decisions. We used From Hell distance, and hypervolume metrics to quantify the_
+_improvement in population in the objective space._
     
 ###Objective
 The objective of this project is to understand and compare the performance of GA on four variants of the DTLZ model. This is done by implementing GA with the default parameters for probability of mutation, crossover, select, number of candidates and number of generations. The report is divided into five sections, starting with the description of genetic algorithm, its implementation, followed by results, threat to validity and future work.
@@ -25,11 +25,12 @@ Genetic Algorithm starts by initializing a population with fixed number of candi
     
 ###Implementation
 The implementation of the genetic algorithm is based on the pseudo code mentioned in [1]. With the following modifications -
+
 1. All the parameters are set to the values as given in the project specification.
-2. **Type 1 comparison** is used twice, first for selection of parent population for which we employ binary domination, and second for selction of fitter child after mutation, here we employ continuous domination. The methods are implemented as in [2]
-3. **Type 2 comparison** is used for early termination, and is implented using Krall's BStop method, and checked every 100 generations.
-3. One point crossover is used to implement the crossover method.
-4. **Pruning** is done every generation, where we retain 90% good candidates, and 10% bad candidates. In every generation the resultant population is sorted using CDOM, and then 90% candidates from the best end and 10% candidates from the bad end are kept in i+1th generation.
+2. *Type 1 comparison* is used twice, first for selection of parent population for which we employ binary domination, and second for selction of fitter child after mutation, here we employ continuous domination. The methods are implemented as in [2]
+3. *Type 2 comparison* is used for early termination, and is implented using Krall's BStop method, and checked every 100 generations.
+4. One point crossover is used to implement the crossover method.
+5. *Pruning* is done every generation, where we retain 90% good candidates, and 10% bad candidates. In every generation the resultant population is sorted using CDOM, and then 90% candidates from the best end and 10% candidates from the bad end are kept in i+1th generation.
 
 To visualize the working of GA on DTLZ we first implemented it on DTLZ 1 with 10 decisions, and 3 objectives for 500 candidates and 100 generations. Though we were not able to see the proper frontier, we did see the solutions getting converge in the objective space. The visualizations can be seen below - 
 
