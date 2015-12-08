@@ -61,15 +61,15 @@ Divergence and Hypervolume are used to evaluate the performance of GA on DTLZ 1,
 
 To quantify the change in the frontier from the baseline population, we used the **from Hell** calculation. For each candidate on the final frontier, the nearest candidate on baseline was found using the nearest neighbour algorithm. The euclidean distance used to find the corresponding closest baseline candidate for each final frontier frontier candidate, was then averaged over the entire population and gave us the divergence of the frontier from the baseline, which we have assumed to be the **point of hell* for our final frontier.
 
-![2and4_1](https://cloud.githubusercontent.com/assets/7557398/11613463/80749fa8-9bef-11e5-9c6a-4abebcecae84.png)
-![2and4_2](https://cloud.githubusercontent.com/assets/7557398/11613464/85526938-9bef-11e5-9942-c971e3ef71fa.png)
-![2and4_3](https://cloud.githubusercontent.com/assets/7557398/11613465/8a2db0de-9bef-11e5-8545-011bcfd0e8e1.png)
-![2and4_4](https://cloud.githubusercontent.com/assets/7557398/11613467/8cee0bca-9bef-11e5-929b-f484f280d024.png)
+![2and4_1](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/1.png?raw=true)
+![2and4_2](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/2.png?raw=true)
+![2and4_3](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/3.png?raw=true)
+![2and4_4](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/4.png?raw=true)
 
-![6and8_1](https://cloud.githubusercontent.com/assets/7557398/11613481/14553354-9bf0-11e5-960b-64aaa69ee85f.png)
-![6and8_2](https://cloud.githubusercontent.com/assets/7557398/11613480/1454acea-9bf0-11e5-8633-8584d62c9a60.png)
-![6and8_3](https://cloud.githubusercontent.com/assets/7557398/11613478/1453c0c8-9bf0-11e5-8272-487709f94611.png)
-![6and8_4](https://cloud.githubusercontent.com/assets/7557398/11613479/1453ba9c-9bf0-11e5-9121-bdeb115cf583.png)
+![6and8_1](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/1%20(1).png?raw=true)
+![6and8_2](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/2%20(1).png?raw=true)
+![6and8_3](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/3%20(1).png?raw=true)
+![6and8_4](https://github.com/shgandhi/s9115hga/blob/master/hw/code/9/img/Divergence%20Snapshots/4%20(1).png?raw=true)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
