@@ -11,10 +11,10 @@
     2. run "python ga.py"
     
 ###Abstract
-_Genetic Algorithm are often used for solving optimization problems, it uses a natural selection process that mimics biological_
+_Genetic Algorithm is often used for solving optimization problems, it uses a natural selection process that mimics biological_
 _evolution. This coding project implements genetic alorithm on DTLZ 1, 3, 5, and 7 models. To visualize how genetic algorithm_
-_works, we first implement GA on DTLZ 1 with 500 decisions and 3 objectives. This is followed by the implementation on DTLZ 1, 3,5_
-_and 7 with 2, 4, 6,8 objectives and 10, 20, 40 decisions. We used From Hell distance, and hypervolume metrics to quantify the_
+_works, we first implement GA on DTLZ 1 with 500 decisions and 3 objectives. This is followed by the implementation on DTLZ 1, 3, 5_
+_and 7 with 2, 4, 6,8 objectives and 10, 20, 40 decisions. We use "From Hell" distance, and hypervolume metrics to quantify the_
 _improvement in population in the objective space._
     
 ###Objective
