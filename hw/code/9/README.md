@@ -55,8 +55,9 @@ To visualize the working of GA on DTLZ we first implemented it on DTLZ 1 with 10
 --------------------------------------------------------------------------------------------------------------------------------------
 
 ###Results
+Divergence and Hypervolume are used to evaluate the performance of GA on DTLZ 1, 3, 5 and 7. 
 
-**II. Divergence**
+**Divergence**
 
 To quantify the change in the frontier from the baseline population, we used the **from Hell** calculation. For each candidate on the final frontier, the nearest candidate on baseline was found using the nearest neighbour algorithm. The euclidean distance used to find the corresponding closest baseline candidate for each final frontier frontier candidate, was then averaged over the entire population and gave us the divergence of the frontier from the baseline, which we have assumed to be the **point of hell* for our final frontier.
 
@@ -72,12 +73,21 @@ To quantify the change in the frontier from the baseline population, we used the
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-**III. Hypervolume calculation**
+**Hypervolume calculation**
+Hypervolume is calculated using the code provided at [3]. 
 
 ![Hypervolume](https://cloud.githubusercontent.com/assets/7557398/11613520/e42962d4-9bf1-11e5-827d-38cf49876b0a.JPG)
+--------------------------------------------------------------------------------------------------------------------------------------
 
 ###Threats to Validity
+1. Since divergence used to compare the performance of GA is actually the euclidean distance from the baseline population, we have assumed that the population moves closer to heaven (away from the baseline), but we had no method of determing the direction in which  population moves, as the euclidean distance is always positive.
+2. The percentage of good and bad candidates retained at the end of every generation is determined by magic numbers selected by hit and trial, and could have influenced the final result.
+
 ###Future Work
+1. This work is extended in Code 10 and the magic numbers used for the parameters in the code are decided using DE. This can be done with other algorithms as well to see a more comprehensive comparison.
+2. The same problem could be optimized using NSGA II, SPEA and GALE, and we can see then where does GA stand in this comparison.
+
 ###References
 1. [Clever Algorithms - GA pseudo code](http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html)
 2. [Less Than](https://github.com/txt/mase/blob/master/lessthan.md)
+3. [Hypervolume Code](https://github.com/ai-se/Spread-HyperVolume)
